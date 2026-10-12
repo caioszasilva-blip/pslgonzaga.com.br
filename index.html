@@ -113,21 +113,7 @@
       .x-hero__wa .x-i { width: 18px; height: 18px; color: #4ee08a; }
       .x-hero__credit { position: absolute; z-index: 1; right: 16px; bottom: 12px; font-size: 12px; color: rgba(255, 255, 255, 0.75); }
 
-      /* Quick info strip */
-      .x-quick { position: relative; z-index: 2; background: var(--x-cream); padding: 24px 0; }
-      .x-quick__grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
-      .x-qbox { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border-top: 3px solid var(--x-gold); border-radius: 16px; background: #fff; box-shadow: var(--x-shadow); text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
-      a.x-qbox:hover { transform: translateY(-3px); box-shadow: var(--x-shadow-lg); }
       .x-ico { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--x-brown); color: var(--x-gold); }
-      .x-qbox__label { display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--x-ochre); }
-      .x-qbox__val { display: block; font-weight: 600; font-size: 15px; line-height: 1.4; }
-      .x-qbox__note { display: block; font-size: 13px; line-height: 1.45; color: var(--x-muted); }
-      .x-qbox__rows { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin: 2px 0 0; font-size: 14px; line-height: 1.4; }
-      .x-qbox__rows dt, .x-qbox__rows dd { margin: 0; }
-      .x-qbox__rows dt { color: var(--x-muted); }
-      .x-qbox__rows dd { font-weight: 600; font-variant-numeric: tabular-nums; }
-      @media (min-width: 600px) { .x-quick__grid { grid-template-columns: 1fr 1fr; } }
-      @media (min-width: 1024px) { .x-quick { padding: 0 0 28px; } .x-quick__grid { grid-template-columns: repeat(4, 1fr); margin-top: -52px; } }
 
       /* Sections */
       .x-sec { padding: 64px 0; }
@@ -186,7 +172,7 @@
 
       /* Schedule */
       .x-week { display: grid; gap: 16px; grid-template-columns: 1fr; }
-      @media (min-width: 860px) { .x-week { grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 20px; } }
+      @media (min-width: 860px) { .x-week { grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 20px; } .x-week #secretaria { grid-column: 1 / -1; } }
       .x-day { display: flex; flex-direction: column; min-width: 0; padding: 22px 24px; border: 1px solid var(--x-line); border-radius: 20px; background: #fff; box-shadow: 0 4px 14px rgba(43, 26, 20, 0.05); }
       .x-day__top { display: flex; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--x-line); }
       .x-day__top .x-ico { width: 40px; height: 40px; }
@@ -224,6 +210,8 @@
       .x-mcard__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--x-line); }
       .x-mcard__when { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 4px 16px 4px 12px; border-radius: 999px; background: var(--x-brown); color: var(--x-gold); font: 700 15px/1.2 var(--x-serif); letter-spacing: 0.03em; white-space: nowrap; }
       .x-mcard__when .x-i { width: 16px; height: 16px; }
+      .x-mcard__top { flex-wrap: wrap; }
+      .x-mcard__when { min-width: 0; max-width: 100%; white-space: normal; }
       .x-mcard__time { font-weight: 700; font-size: 17px; line-height: 1.3; font-variant-numeric: tabular-nums; color: var(--x-brown); text-align: right; }
       .x-mcard__time small { display: block; font-size: 12px; font-weight: 600; color: var(--x-muted); }
       .x-mcard h4 { margin: 16px 0 0; font: 700 18px/1.3 var(--x-serif); color: var(--x-ochre); }
@@ -590,7 +578,7 @@
       @media (min-width: 860px) { .x-viv__feat .x-viv__track img { aspect-ratio: 16 / 9; } .x-viv__feat .x-viv__body { padding: 28px 32px 32px; } }
 
       /* Featured notice below the hero */
-      .x-promo { position: relative; z-index: 2; background: var(--x-cream); padding: 20px 0 4px; }
+      .x-promo { position: relative; z-index: 2; background: var(--x-cream); padding: 20px 0; }
       .x-promo__card { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; padding: 18px 20px; border: 1px solid var(--x-line); border-left: 4px solid var(--x-gold); border-radius: 16px; background: #fff; box-shadow: var(--x-shadow); }
       .x-promo__text { flex: 1 1 280px; min-width: 0; }
       .x-promo__tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
@@ -602,7 +590,7 @@
       .x-promo__photo .x-photo__img { width: min(100%, 240px); border-radius: 16px; box-shadow: none; }
       .x-promo__photo img { aspect-ratio: 3 / 4; object-fit: contain; }
       @media (min-width: 600px) { .x-promo .x-promo__photo { flex: none; width: 132px; } .x-promo__photo .x-photo__img { width: 100%; } }
-      @media (min-width: 1024px) { .x-promo { padding: 28px 0 8px; } .x-promo + .x-quick { padding-top: 20px; } .x-promo + .x-quick .x-quick__grid { margin-top: 0; } }
+      @media (min-width: 1024px) { .x-promo { padding: 28px 0; } }
 
       /* Liturgia Diária */
       .x-lit { max-width: 860px; margin: 0 auto; overflow: hidden; border: 1px solid var(--x-line); border-radius: 24px; background: var(--x-cream-2); box-shadow: 0 4px 14px rgba(43, 26, 20, 0.05); }
@@ -779,27 +767,6 @@
           </div>
         </section>
 
-        <section class="x-quick" aria-label="Informações rápidas">
-          <div class="x-wrap x-quick__grid">
-            <a class="x-qbox" href="#horarios">
-              <span class="x-ico"><svg class="x-i"><use href="#i-cross" /></svg></span>
-              <span><span class="x-qbox__label">Próxima missa</span><span class="x-qbox__val">Domingo 07h00, 09h00 e 18h00</span><span class="x-qbox__note">Sexta 19h30 · Sábado 18h00 (Capela)</span></span>
-            </a>
-            <a class="x-qbox" href="#endereco">
-              <span class="x-ico"><svg class="x-i"><use href="#i-pin" /></svg></span>
-              <span><span class="x-qbox__label">Endereço</span><span class="x-qbox__val">Rua Antônio da Mata Júnior, 80</span><span class="x-qbox__note">Jardim São Luiz, São Paulo – SP</span></span>
-            </a>
-            <a class="x-qbox" href="https://api.whatsapp.com/send?phone=5511955788539" target="_blank" rel="noopener">
-              <span class="x-ico"><svg class="x-i"><use href="#i-wa" /></svg></span>
-              <span><span class="x-qbox__label">WhatsApp</span><span class="x-qbox__val">(11) 95578-8539</span><span class="x-qbox__note">Fale com a secretaria</span></span>
-            </a>
-            <a class="x-qbox" href="#secretaria">
-              <span class="x-ico"><svg class="x-i"><use href="#i-clock" /></svg></span>
-              <span><span class="x-qbox__label">Secretaria</span><dl class="x-qbox__rows"><dt>Terça a sexta</dt><dd>09h00 às 12h00 e 14h00 às 18h00</dd><dt>Sábado</dt><dd>09h00 às 12h00</dd></dl></span>
-            </a>
-          </div>
-        </section>
-
         <section class="x-anniv" id="aniversario" aria-labelledby="aniversario-titulo">
           <div class="x-wrap">
             <article class="x-anniv__card">
@@ -910,7 +877,6 @@
               <article class="x-day">
                 <div class="x-day__top"><span class="x-ico"><svg class="x-i"><use href="#i-cross" /></svg></span><h3 class="x-day__name">Segunda-feira</h3></div>
                 <ul class="x-slots">
-                  <li class="x-slot"><span class="x-slot__time">19h30</span><span class="x-slot__what"><span class="x-slot__name">Missa da Esperança</span><span class="x-slot__info">1ª segunda do mês</span><span class="x-slot__meta"><span class="x-tag x-tag--matriz">Matriz</span><span class="x-tag x-tag--mensal">Mensal</span></span></span></li>
                   <li class="x-slot"><span class="x-slot__time">19h30</span><span class="x-slot__what"><span class="x-slot__name">Terço dos Homens</span><span class="x-slot__meta"><span class="x-tag x-tag--capela">Capela N. Sra. da Penha</span></span></span></li>
                   <li class="x-slot"><span class="x-slot__time">20h00</span><span class="x-slot__what"><span class="x-slot__name">Pastoral da Sobriedade</span><span class="x-slot__meta"><span class="x-tag x-tag--matriz">Matriz</span></span></span></li>
                 </ul>
@@ -919,12 +885,6 @@
                 <div class="x-day__top"><span class="x-ico"><svg class="x-i"><use href="#i-rosary" /></svg></span><h3 class="x-day__name">Terça-feira</h3></div>
                 <ul class="x-slots">
                   <li class="x-slot"><span class="x-slot__time">20h00</span><span class="x-slot__what"><span class="x-slot__name">Terço dos Homens</span><span class="x-slot__meta"><span class="x-tag x-tag--matriz">Matriz</span></span></span></li>
-                </ul>
-              </article>
-              <article class="x-day">
-                <div class="x-day__top"><span class="x-ico"><svg class="x-i"><use href="#i-cross" /></svg></span><h3 class="x-day__name">Quarta-feira</h3></div>
-                <ul class="x-slots">
-                  <li class="x-slot"><span class="x-slot__time">19h30</span><span class="x-slot__what"><span class="x-slot__name">Missa por Cura e Libertação</span><span class="x-slot__info">Última quarta do mês</span><span class="x-slot__meta"><span class="x-tag x-tag--matriz">Matriz</span><span class="x-tag x-tag--mensal">Mensal</span></span></span></li>
                 </ul>
               </article>
               <article class="x-day">
@@ -981,7 +941,7 @@
                 <div class="x-mcard__foot"><span class="x-tag x-tag--matriz">Matriz</span></div>
               </li>
               <li class="x-mcard">
-                <div class="x-mcard__top"><span class="x-mcard__when"><svg class="x-i"><use href="#i-cal" /></svg>1ª segunda</span><span class="x-mcard__time">19h30</span></div>
+                <div class="x-mcard__top"><span class="x-mcard__when"><svg class="x-i"><use href="#i-cal" /></svg>1ª segunda-feira do mês</span><span class="x-mcard__time">19h30</span></div>
                 <h4>Missa da Esperança</h4>
                 <p>Em sufrágio pelos fiéis defuntos.</p>
                 <div class="x-mcard__foot"><span class="x-tag x-tag--matriz">Matriz</span></div>
@@ -1015,7 +975,7 @@
                 <div class="x-mcard__foot"><span class="x-tag x-tag--matriz">Matriz</span></div>
               </li>
               <li class="x-mcard">
-                <div class="x-mcard__top"><span class="x-mcard__when"><svg class="x-i"><use href="#i-cal" /></svg>Última quarta</span><span class="x-mcard__time">19h30</span></div>
+                <div class="x-mcard__top"><span class="x-mcard__when"><svg class="x-i"><use href="#i-cal" /></svg>Última quarta-feira do mês</span><span class="x-mcard__time">19h30</span></div>
                 <h4>Missa por Cura e Libertação</h4>
                 <div class="x-mcard__foot"><span class="x-tag x-tag--matriz">Matriz</span></div>
               </li>

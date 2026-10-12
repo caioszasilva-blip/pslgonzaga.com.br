@@ -375,6 +375,8 @@
       .x-tl__media .x-photo img { border-radius: 0; box-shadow: none; }
       .x-tl__media .x-duo__imgs .x-photo img { aspect-ratio: 3 / 4; }
       .x-tl__media .x-gal .x-photo img { aspect-ratio: 4 / 3; }
+      .x-tl__media .x-gal--vert { align-items: start; }
+      .x-tl__media .x-gal--vert .x-photo img { aspect-ratio: auto; height: auto; object-fit: contain; }
       .x-tl__card .x-tl__more { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-weight: 700; color: var(--x-ochre); }
       .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
       .x-tags li { padding: 4px 12px; border-radius: 999px; background: var(--x-cream); font-size: 13px; }
@@ -1524,14 +1526,28 @@
                 </div>
               </li>
               <li class="x-tl__item">
-                <figure class="x-tl__media">
-                  <img src="posse_pe_luciano_2022.jpg" alt="Pe. Luciano Borges Basílio entra pelo corredor central da igreja acenando, aplaudido pelos fiéis, no dia de sua posse" loading="lazy" />
-                  <figcaption>Posse do novo pároco, Pe. Luciano Borges Basílio, em 03/07/2022</figcaption>
-                </figure>
+                <div class="x-tl__media x-stack">
+                  <figure>
+                    <img src="posse_pe_luciano_2022.jpg" alt="Pe. Luciano Borges Basílio entra pelo corredor central da igreja acenando, aplaudido pelos fiéis, no dia de sua posse" loading="lazy" />
+                    <figcaption>Posse do novo pároco, Pe. Luciano Borges Basílio, em 03/07/2022</figcaption>
+                  </figure>
+                  <ul class="x-gal--mini" aria-label="Mais fotos da posse do Pe. Luciano Borges Basílio, 2022">
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="0" aria-label="Ampliar foto: Pe. Luciano entra acenando pelo corredor"><span class="x-photo__img"><img src="posse_2022_1.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano entra acenando pelo corredor" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="1" aria-label="Ampliar foto: Pe. Luciano derrama água na pia batismal"><span class="x-photo__img"><img src="posse_2022_2.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano derrama água na pia batismal" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="2" aria-label="Ampliar foto: igreja lotada de fiéis"><span class="x-photo__img"><img src="posse_2022_3.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: igreja lotada de fiéis" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="3" aria-label="Ampliar foto: Pe. Luciano no ambão"><span class="x-photo__img"><img src="posse_2022_4.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano no ambão" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="4" aria-label="Ampliar foto: Pe. Luciano ajoelhado diante do bispo"><span class="x-photo__img"><img src="posse_2022_5.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano ajoelhado diante do bispo" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="5" aria-label="Ampliar foto: Pe. Luciano com coroinhas"><span class="x-photo__img"><img src="posse_2022_6.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano com coroinhas" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="6" aria-label="Ampliar foto: Pe. Luciano fala ao microfone sob o painel do Cristo"><span class="x-photo__img"><img src="posse_2022_7.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano fala ao microfone sob o painel do Cristo" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="7" aria-label="Ampliar foto: Evangeliário erguido"><span class="x-photo__img"><img src="posse_2022_8.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Evangeliário erguido" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="8" aria-label="Ampliar foto: Pe. Luciano dá a bênção"><span class="x-photo__img"><img src="posse_2022_9.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano dá a bênção" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="posse2022" data-i="9" aria-label="Ampliar foto: presbitério com o clero"><span class="x-photo__img"><img src="posse_2022_10.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: presbitério com o clero" loading="lazy" /></span></button></li>
+                  </ul>
+                </div>
                 <div class="x-tl__card">
                   <span class="x-tl__date">Julho de 2022</span>
-                  <h3>Novos pastores</h3>
-                  <p>Em 3 de julho de 2022 tomaram posse o Pe. Luciano Borges Basílio, como pároco, e o Pe. Pedro Paganin, como vigário.</p>
+                  <h3>Novo pároco</h3>
+                  <p>Em 3 de julho de 2022 tomou posse o Pe. Luciano Borges Basílio, como pároco.</p>
                 </div>
               </li>
               <li class="x-tl__item x-tl__item--memoria">
@@ -1544,6 +1560,117 @@
                   <h3><span class="x-tl__cross" aria-hidden="true">†</span> Padre Edmundo da Mata</h3>
                   <p>Em 15 de julho de 2022, faleceu o Padre Edmundo da Mata, que esteve à frente da Paróquia São Luiz Gonzaga durante 58 anos, dedicando sua vida ao serviço da Igreja e da comunidade. Seu legado de fé, dedicação e evangelização permanece vivo na história da paróquia e na memória dos fiéis.</p>
                   <p class="x-tl__rip"><em>Requiescat in pace — Descanse em paz.</em></p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media">
+                  <figure class="x-whole">
+                    <img src="corrimao_2022.jpg" alt="Corrimão de aço inox sendo instalado na escadaria de entrada da Paróquia São Luiz Gonzaga, em 2022" loading="lazy" />
+                    <figcaption>Instalação do corrimão, 2022</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">2022</span>
+                  <h3>Corrimão na escadaria</h3>
+                  <p>Em 2022, foi instalado o corrimão na escadaria da igreja, atendendo às exigências do Corpo de Bombeiros.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-stack">
+                  <figure class="x-whole">
+                    <img src="viasacra_2022_1.jpg" alt="Restauração da Via-Sacra em 2022: nave da igreja com os quadros da Via-Sacra restaurados nas paredes, entre os vitrais" loading="lazy" />
+                    <figcaption>Via-Sacra restaurada, setembro de 2022</figcaption>
+                  </figure>
+                  <ul class="x-gal--mini" aria-label="Mais fotos da restauração da Via-Sacra, 2022">
+                    <li><button class="x-photo" type="button" data-album="viasacra2022" data-i="0" aria-label="Ampliar foto: quadros restaurados na parede lateral"><span class="x-photo__img"><img src="viasacra_2022_2.jpg" alt="Restauração da Via-Sacra em 2022: quadros da Via-Sacra restaurados na parede lateral, com vitrais" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="viasacra2022" data-i="1" aria-label="Ampliar foto: quadros embalados após a restauração"><span class="x-photo__img"><img src="viasacra_2022_3.jpg" alt="Restauração da Via-Sacra em 2022: quadros da Via-Sacra embalados em plástico após a restauração" loading="lazy" /></span></button></li>
+                  </ul>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Setembro de 2022</span>
+                  <h3>Restauração da Via-Sacra</h3>
+                  <p>Em setembro de 2022, os quadros da Via-Sacra foram restaurados, em decorrência de danos causados por cupins.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media">
+                  <figure class="x-whole">
+                    <img src="pe_pedro_2022.jpg" alt="Padre Pedro Paganin Júnior, de casula verde, diante do presbitério da Paróquia São Luiz Gonzaga" loading="lazy" />
+                    <figcaption>Pe. Pedro Paganin Júnior, vigário</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">18 de setembro de 2022</span>
+                  <h3>Chegada do vigário Pe. Pedro Paganin Júnior</h3>
+                  <p>Em 18 de setembro de 2022, chegou à Paróquia São Luiz Gonzaga o vigário Padre Pedro Paganin Júnior.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-gal x-gal--vert">
+                  <figure>
+                    <button class="x-photo" type="button" data-album="santissimo2023" data-i="0" aria-label="Ampliar foto: antes, forro de madeira"><span class="x-photo__img"><img src="santissimo_2023_2.jpg" alt="Capela do Santíssimo com o antigo forro de madeira, durante a obra" loading="lazy" /></span></button>
+                    <figcaption>Antes: forro de madeira</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="x-photo" type="button" data-album="santissimo2023" data-i="1" aria-label="Ampliar foto: depois, forro de gesso"><span class="x-photo__img"><img src="santissimo_2023_1.jpg" alt="Capela do Santíssimo com o novo forro de gesso e iluminação, em 2023" loading="lazy" /></span></button>
+                    <figcaption>Depois: forro de gesso</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Fevereiro de 2023</span>
+                  <h3>Novo forro da Capela do Santíssimo</h3>
+                  <p>Em fevereiro de 2023, o forro de madeira da Capela do Santíssimo foi substituído por forro de gesso.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media">
+                  <figure class="x-whole">
+                    <img src="imagem_registro_2023.jpg" alt="Imagem de um jovem santo de sobrepeliz segurando um crucifixo, diante da porta da Paróquia São Luiz Gonzaga, em junho de 2023" loading="lazy" />
+                    <figcaption>A imagem doada, recebida em 21/06/2023</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">21 de junho de 2023</span>
+                  <h3>Uma imagem doada à paróquia</h3>
+                  <p>Em 21 de junho de 2023, chegou à Paróquia São Luiz Gonzaga uma imagem oriunda da Diocese de Registro, que estava no Seminário do Ipiranga e foi doada à paróquia.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-stack">
+                  <figure class="x-whole">
+                    <img src="forro_2023_3.jpg" alt="Troca do forro em 2023: novo forro de fibra mineral quase concluído, com luminárias" loading="lazy" />
+                    <figcaption>Novo forro de fibra mineral, agosto de 2023</figcaption>
+                  </figure>
+                  <ul class="x-gal--mini" aria-label="Mais fotos da troca do forro, 2023">
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="0" aria-label="Ampliar foto: forro sendo instalado"><span class="x-photo__img"><img src="forro_2023_1.jpg" alt="Troca do forro em 2023: forro sendo instalado, com placas parcialmente colocadas e andaimes" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="1" aria-label="Ampliar foto: novo forro com luminárias acesas"><span class="x-photo__img"><img src="forro_2023_2.jpg" alt="Troca do forro em 2023: novo forro em instalação, com luminárias acesas" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="2" aria-label="Ampliar foto: estrutura metálica e andaimes"><span class="x-photo__img"><img src="forro_2023_4.jpg" alt="Troca do forro em 2023: interior da igreja com estrutura metálica exposta e andaimes" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="3" aria-label="Ampliar foto: nave sem forro"><span class="x-photo__img"><img src="forro_2023_5.jpg" alt="Troca do forro em 2023: nave da igreja sem forro, com a estrutura do telhado aparente" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="4" aria-label="Ampliar foto: estrutura do telhado exposta"><span class="x-photo__img"><img src="forro_2023_6.jpg" alt="Troca do forro em 2023: estrutura metálica do telhado exposta durante a obra" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="forro2023" data-i="5" aria-label="Ampliar foto: presbitério protegido com lona"><span class="x-photo__img"><img src="forro_2023_7.jpg" alt="Troca do forro em 2023: presbitério protegido com lona preta durante a obra" loading="lazy" /></span></button></li>
+                  </ul>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Agosto de 2023</span>
+                  <h3>Novo forro da igreja</h3>
+                  <p>Em agosto de 2023, o forro de PVC da igreja foi substituído por forro de fibra mineral, atendendo às exigências do Corpo de Bombeiros.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-stack">
+                  <figure class="x-whole">
+                    <img src="telhado_2023_2.jpg" alt="Reforma do telhado em 2023: telhado novo de telha sanduíche com a cruz e a cidade ao fundo" loading="lazy" />
+                    <figcaption>Telhado reformado com telhas sanduíche, dezembro de 2023</figcaption>
+                  </figure>
+                  <ul class="x-gal--mini" aria-label="Mais fotos da reforma do telhado, 2023">
+                    <li><button class="x-photo" type="button" data-album="telhado2023" data-i="0" aria-label="Ampliar foto: homem em pé sobre o telhado novo"><span class="x-photo__img"><img src="telhado_2023_1.jpg" alt="Reforma do telhado em 2023: homem em pé sobre o telhado novo, cruz ao fundo" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="telhado2023" data-i="1" aria-label="Ampliar foto: selfie sobre o telhado novo"><span class="x-photo__img"><img src="telhado_2023_3.jpg" alt="Reforma do telhado em 2023: selfie sobre o telhado novo, cruz ao fundo" loading="lazy" /></span></button></li>
+                  </ul>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Dezembro de 2023</span>
+                  <h3>Novo telhado</h3>
+                  <p>Em dezembro de 2023, todo o telhado da igreja foi reformado com telhas sanduíche.</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -2103,6 +2230,28 @@
       <figure class="x-lb__slide" data-album="jubileu2015"><img src="jubileu_2015_4.jpg" alt="Jubileu de Ouro Sacerdotal de 2015: Dom Emílio Pignoli e Pe. Edmundo lado a lado" loading="lazy" /><figcaption>Jubileu de Ouro Sacerdotal, 2015: Dom Emílio e Pe. Edmundo</figcaption></figure>
       <figure class="x-lb__slide" data-album="jubileu2015"><img src="jubileu_2015_5.jpg" alt="Jubileu de Ouro Sacerdotal de 2015: Pe. Edmundo recebe um quadro de homenagem" loading="lazy" /><figcaption>Jubileu de Ouro Sacerdotal, 2015: quadro de homenagem</figcaption></figure>
       <figure class="x-lb__slide" data-album="jubileu2015"><img src="jubileu_2015_6.jpg" alt="Jubileu de Ouro Sacerdotal de 2015: Pe. Edmundo recebe nova casula com a imagem de Nossa Senhora" loading="lazy" /><figcaption>Jubileu de Ouro Sacerdotal, 2015: nova casula com Nossa Senhora</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_1.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano entra acenando pelo corredor" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: entrada acenando pelo corredor</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_2.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano derrama água na pia batismal" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: água na pia batismal</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_3.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: igreja lotada de fiéis" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: igreja lotada de fiéis</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_4.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano no ambão" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: no ambão</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_5.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano ajoelhado diante do bispo" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: ajoelhado diante do bispo</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_6.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano com coroinhas" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: com coroinhas</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_7.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano fala ao microfone sob o painel do Cristo" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: ao microfone sob o painel do Cristo</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_8.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Evangeliário erguido" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: Evangeliário erguido</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_9.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: Pe. Luciano dá a bênção" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: a bênção</figcaption></figure>
+      <figure class="x-lb__slide" data-album="posse2022"><img src="posse_2022_10.jpg" alt="Posse do Pe. Luciano Borges Basílio, 2022: presbitério com o clero" loading="lazy" /><figcaption>Posse do Pe. Luciano Borges Basílio, 2022: presbitério com o clero</figcaption></figure>
+      <figure class="x-lb__slide" data-album="viasacra2022"><img src="viasacra_2022_2.jpg" alt="Restauração da Via-Sacra em 2022: quadros da Via-Sacra restaurados na parede lateral, com vitrais" loading="lazy" /><figcaption>Restauração da Via-Sacra, 2022: quadros na parede lateral</figcaption></figure>
+      <figure class="x-lb__slide" data-album="viasacra2022"><img src="viasacra_2022_3.jpg" alt="Restauração da Via-Sacra em 2022: quadros da Via-Sacra embalados em plástico após a restauração" loading="lazy" /><figcaption>Restauração da Via-Sacra, 2022: quadros embalados após a restauração</figcaption></figure>
+      <figure class="x-lb__slide" data-album="santissimo2023"><img src="santissimo_2023_2.jpg" alt="Capela do Santíssimo com o antigo forro de madeira, durante a obra" loading="lazy" /><figcaption>Antes: forro de madeira</figcaption></figure>
+      <figure class="x-lb__slide" data-album="santissimo2023"><img src="santissimo_2023_1.jpg" alt="Capela do Santíssimo com o novo forro de gesso e iluminação, em 2023" loading="lazy" /><figcaption>Depois: forro de gesso</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_1.jpg" alt="Troca do forro em 2023: forro sendo instalado, com placas parcialmente colocadas e andaimes" loading="lazy" /><figcaption>Troca do forro, 2023: placas sendo instaladas</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_2.jpg" alt="Troca do forro em 2023: novo forro em instalação, com luminárias acesas" loading="lazy" /><figcaption>Troca do forro, 2023: luminárias acesas no novo forro</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_4.jpg" alt="Troca do forro em 2023: interior da igreja com estrutura metálica exposta e andaimes" loading="lazy" /><figcaption>Troca do forro, 2023: estrutura metálica e andaimes</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_5.jpg" alt="Troca do forro em 2023: nave da igreja sem forro, com a estrutura do telhado aparente" loading="lazy" /><figcaption>Troca do forro, 2023: nave sem forro</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_6.jpg" alt="Troca do forro em 2023: estrutura metálica do telhado exposta durante a obra" loading="lazy" /><figcaption>Troca do forro, 2023: estrutura do telhado exposta</figcaption></figure>
+      <figure class="x-lb__slide" data-album="forro2023"><img src="forro_2023_7.jpg" alt="Troca do forro em 2023: presbitério protegido com lona preta durante a obra" loading="lazy" /><figcaption>Troca do forro, 2023: presbitério protegido com lona</figcaption></figure>
+      <figure class="x-lb__slide" data-album="telhado2023"><img src="telhado_2023_1.jpg" alt="Reforma do telhado em 2023: homem em pé sobre o telhado novo, cruz ao fundo" loading="lazy" /><figcaption>Reforma do telhado, 2023: homem sobre o telhado novo</figcaption></figure>
+      <figure class="x-lb__slide" data-album="telhado2023"><img src="telhado_2023_3.jpg" alt="Reforma do telhado em 2023: selfie sobre o telhado novo, cruz ao fundo" loading="lazy" /><figcaption>Reforma do telhado, 2023: selfie sobre o telhado novo</figcaption></figure>
       <figure class="x-lb__slide" data-album="fachada2025"><img src="fachada_2025_1.jpg" alt="Reforma da fachada em 2025: fachada da igreja com andaimes, vista do portão" loading="lazy" /><figcaption>Reforma da fachada, 2025: andaimes vistos do portão</figcaption></figure>
       <figure class="x-lb__slide" data-album="fachada2025"><img src="fachada_2025_3.jpg" alt="Reforma da fachada em 2025: operários de capacete inspecionam as pastilhas amarelas da fachada" loading="lazy" /><figcaption>Reforma da fachada, 2025: inspeção das pastilhas</figcaption></figure>
       <figure class="x-lb__slide" data-album="fachada2025"><img src="fachada_2025_4.jpg" alt="Reforma da fachada em 2025: equipe no alto da fachada, junto ao vitral circular e às pastilhas" loading="lazy" /><figcaption>Reforma da fachada, 2025: equipe junto ao vitral</figcaption></figure>

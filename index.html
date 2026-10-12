@@ -362,6 +362,17 @@
       .x-gal--mini { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; }
       .x-gal--mini .x-photo__img { border-radius: 10px; }
       .x-tl__media .x-gal--mini img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; box-shadow: none; }
+      .x-tl__item--memoria::before { background: var(--x-brown); box-shadow: 0 0 0 2px var(--x-brown); }
+      .x-tl__item--memoria .x-tl__media img { filter: grayscale(1); }
+      .x-tl__item--memoria .x-tl__card { background: var(--x-cream-2); border-left: 3px solid var(--x-brown); }
+      .x-tl__item--memoria .x-tl__date { color: var(--x-muted); }
+      .x-tl__item--memoria h3 { color: var(--x-brown); }
+      .x-tl__cross { margin-right: 4px; font-weight: 400; color: var(--x-muted); }
+      .x-tl__card .x-tl__rip { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--x-gold); font: italic 500 16px/1.5 var(--x-serif); color: var(--x-brown); }
+      .x-tl__media .x-photo__img { border-radius: 12px; }
+      .x-tl__media .x-photo img { border-radius: 0; box-shadow: none; }
+      .x-tl__media .x-duo__imgs .x-photo img { aspect-ratio: 3 / 4; }
+      .x-tl__media .x-gal .x-photo img { aspect-ratio: 4 / 3; }
       .x-tl__card .x-tl__more { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-weight: 700; color: var(--x-ochre); }
       .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
       .x-tags li { padding: 4px 12px; border-radius: 999px; background: var(--x-cream); font-size: 13px; }
@@ -1490,8 +1501,20 @@
                 </figure>
                 <div class="x-tl__card">
                   <span class="x-tl__date">Julho de 2022</span>
-                  <h3>Novos pastores e a despedida do Pe. Edmundo</h3>
-                  <p>Em 3 de julho de 2022 tomaram posse o Pe. Luciano Borges Basílio, como pároco, e o Pe. Pedro Paganin, como vigário. O Pe. Edmundo da Mata faleceu em 15 de julho de 2022, após receber as honras de pároco emérito.</p>
+                  <h3>Novos pastores</h3>
+                  <p>Em 3 de julho de 2022 tomaram posse o Pe. Luciano Borges Basílio, como pároco, e o Pe. Pedro Paganin, como vigário.</p>
+                </div>
+              </li>
+              <li class="x-tl__item x-tl__item--memoria">
+                <figure class="x-tl__media">
+                  <img src="pe_edmundo_memoria.jpg" alt="Padre Edmundo da Mata, paramentado e sorridente, na igreja cheia de fiéis" loading="lazy" />
+                  <figcaption>Padre Edmundo da Mata</figcaption>
+                </figure>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">15 de julho de 2022</span>
+                  <h3><span class="x-tl__cross" aria-hidden="true">†</span> Padre Edmundo da Mata</h3>
+                  <p>Em 15 de julho de 2022, faleceu o Padre Edmundo da Mata, que esteve à frente da Paróquia São Luiz Gonzaga durante 58 anos, dedicando sua vida ao serviço da Igreja e da comunidade. Seu legado de fé, dedicação e evangelização permanece vivo na história da paróquia e na memória dos fiéis.</p>
+                  <p class="x-tl__rip"><em>Requiescat in pace — Descanse em paz.</em></p>
                 </div>
               </li>
             </ol>
@@ -1581,8 +1604,8 @@
                 <div class="x-tl__media">
                   <figure class="x-duo" style="margin: 0;">
                     <div class="x-duo__imgs">
-                      <img src="penhinha_imagem_flores.jpg" alt="Imagem de Nossa Senhora da Penha entre flores brancas" loading="lazy" />
-                      <img src="penhinha_imagem_detalhe_2006.jpg" alt="Detalhe do rosto da imagem de Nossa Senhora da Penha, 2006" loading="lazy" />
+                      <button class="x-photo" type="button" data-album="penha1973" data-i="0" aria-label="Ampliar foto: a imagem entre flores"><span class="x-photo__img"><img src="penhinha_imagem_flores.jpg" alt="Imagem de Nossa Senhora da Penha entre flores brancas" loading="lazy" /></span></button>
+                      <button class="x-photo" type="button" data-album="penha1973" data-i="1" aria-label="Ampliar foto: detalhe do rosto da imagem"><span class="x-photo__img"><img src="penhinha_imagem_detalhe_2006.jpg" alt="Detalhe do rosto da imagem de Nossa Senhora da Penha, 2006" loading="lazy" /></span></button>
                     </div>
                     <figcaption>A imagem de Nossa Senhora da Penha, preservada pela Paróquia</figcaption>
                   </figure>
@@ -1639,8 +1662,8 @@
                   </figure>
                   <figure class="x-duo">
                     <div class="x-duo__imgs">
-                      <img src="capela_penha_origem_05.jpg" alt="Padre Décio com duas paroquianas na primeira missa" loading="lazy" />
-                      <img src="capela_penha_origem_09.jpg" alt="Fiéis reunidos na primeira missa da comunidade" loading="lazy" />
+                      <button class="x-photo" type="button" data-album="penha2008" data-i="0" aria-label="Ampliar foto: Padre Décio com duas paroquianas"><span class="x-photo__img"><img src="capela_penha_origem_05.jpg" alt="Padre Décio com duas paroquianas na primeira missa" loading="lazy" /></span></button>
+                      <button class="x-photo" type="button" data-album="penha2008" data-i="1" aria-label="Ampliar foto: fiéis reunidos na primeira missa"><span class="x-photo__img"><img src="capela_penha_origem_09.jpg" alt="Fiéis reunidos na primeira missa da comunidade" loading="lazy" /></span></button>
                     </div>
                     <figcaption>Primeira missa da Comunidade, 08/06/2008. Fotos: Fatorelli.</figcaption>
                   </figure>
@@ -1674,8 +1697,8 @@
                 <figure class="x-tl__media x-stack">
                   <img src="capela_penha_2022_4.jpg" alt="Missa de reabertura da Comunidade Nossa Senhora da Penha no espaço alugado" loading="lazy" />
                   <div class="x-duo x-duo__imgs">
-                    <img src="capela_penha_2022_2.jpg" alt="Padre Sylvestre no ambão na reabertura da capela" loading="lazy" />
-                    <img src="capela_penha_2022_3.jpg" alt="Visão geral da capela no espaço alugado" loading="lazy" />
+                    <button class="x-photo" type="button" data-album="penha2022" data-i="0" aria-label="Ampliar foto: Padre Sylvestre no ambão"><span class="x-photo__img"><img src="capela_penha_2022_2.jpg" alt="Padre Sylvestre no ambão na reabertura da capela" loading="lazy" /></span></button>
+                    <button class="x-photo" type="button" data-album="penha2022" data-i="1" aria-label="Ampliar foto: visão geral da capela"><span class="x-photo__img"><img src="capela_penha_2022_3.jpg" alt="Visão geral da capela no espaço alugado" loading="lazy" /></span></button>
                   </div>
                   <figcaption>Reabertura da capela pelo Padre Sylvestre, 08/01/2022.</figcaption>
                 </figure>
@@ -1701,23 +1724,23 @@
                   </figure>
                   <div class="x-gal x-gal--3">
                 <figure>
-                  <img src="capela_penha_2025_2.jpg" alt="Consagração no altar durante a primeira missa" loading="lazy" />
+                  <button class="x-photo" type="button" data-album="penha2025" data-i="0" aria-label="Ampliar foto: consagração no altar"><span class="x-photo__img"><img src="capela_penha_2025_2.jpg" alt="Consagração no altar durante a primeira missa" loading="lazy" /></span></button>
                   <figcaption>Consagração no altar</figcaption>
                 </figure>
                 <figure>
-                  <img src="capela_penha_2025_4.jpg" alt="Padre e acólito com microfone" loading="lazy" />
+                  <button class="x-photo" type="button" data-album="penha2025" data-i="1" aria-label="Ampliar foto: padre e acólito"><span class="x-photo__img"><img src="capela_penha_2025_4.jpg" alt="Padre e acólito com microfone" loading="lazy" /></span></button>
                   <figcaption>Padre e acólito</figcaption>
                 </figure>
                 <figure>
-                  <img src="capela_penha_2025_5.jpg" alt="Leitura no ambão" loading="lazy" />
+                  <button class="x-photo" type="button" data-album="penha2025" data-i="2" aria-label="Ampliar foto: leitura no ambão"><span class="x-photo__img"><img src="capela_penha_2025_5.jpg" alt="Leitura no ambão" loading="lazy" /></span></button>
                   <figcaption>Leitura no ambão</figcaption>
                 </figure>
                 <figure>
-                  <img src="capela_penha_2025_6.jpg" alt="Fiéis lotando a capela" loading="lazy" />
+                  <button class="x-photo" type="button" data-album="penha2025" data-i="3" aria-label="Ampliar foto: fiéis lotando a capela"><span class="x-photo__img"><img src="capela_penha_2025_6.jpg" alt="Fiéis lotando a capela" loading="lazy" /></span></button>
                   <figcaption>Fiéis lotando a capela</figcaption>
                 </figure>
                 <figure>
-                  <img src="capela_penha_2025_7.jpg" alt="Celebrantes no altar" loading="lazy" />
+                  <button class="x-photo" type="button" data-album="penha2025" data-i="4" aria-label="Ampliar foto: celebrantes no altar"><span class="x-photo__img"><img src="capela_penha_2025_7.jpg" alt="Celebrantes no altar" loading="lazy" /></span></button>
                   <figcaption>Celebrantes no altar</figcaption>
                 </figure>
                   </div>
@@ -2015,6 +2038,17 @@
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_7.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli junto ao altar" loading="lazy" /><figcaption>Consagração do Altar, 2007: Dom Emílio junto ao altar</figcaption></figure>
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_8.jpg" alt="Consagração do Altar em 2007: incensação do altar sob o painel do Cristo" loading="lazy" /><figcaption>Consagração do Altar, 2007: incensação do altar</figcaption></figure>
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_9.jpg" alt="Consagração do Altar em 2007: vista do altar consagrado com o clero" loading="lazy" /><figcaption>Consagração do Altar, 2007: o altar consagrado</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha1973"><img src="penhinha_imagem_flores.jpg" alt="Imagem de Nossa Senhora da Penha entre flores brancas" loading="lazy" /><figcaption>A imagem de Nossa Senhora da Penha entre flores</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha1973"><img src="penhinha_imagem_detalhe_2006.jpg" alt="Detalhe do rosto da imagem de Nossa Senhora da Penha, 2006" loading="lazy" /><figcaption>Detalhe do rosto da imagem, 2006</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2008"><img src="capela_penha_origem_05.jpg" alt="Padre Décio com duas paroquianas na primeira missa" loading="lazy" /><figcaption>Primeira missa da Comunidade, 08/06/2008: Padre Décio com paroquianas</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2008"><img src="capela_penha_origem_09.jpg" alt="Fiéis reunidos na primeira missa da comunidade" loading="lazy" /><figcaption>Primeira missa da Comunidade, 08/06/2008: fiéis reunidos</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2022"><img src="capela_penha_2022_2.jpg" alt="Padre Sylvestre no ambão na reabertura da capela" loading="lazy" /><figcaption>Reabertura, 08/01/2022: Padre Sylvestre no ambão</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2022"><img src="capela_penha_2022_3.jpg" alt="Visão geral da capela no espaço alugado" loading="lazy" /><figcaption>Reabertura, 08/01/2022: a capela no espaço alugado</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2025"><img src="capela_penha_2025_2.jpg" alt="Consagração no altar durante a primeira missa" loading="lazy" /><figcaption>Primeira missa, 08/02/2025: consagração no altar</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2025"><img src="capela_penha_2025_4.jpg" alt="Padre e acólito com microfone" loading="lazy" /><figcaption>Primeira missa, 08/02/2025: padre e acólito</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2025"><img src="capela_penha_2025_5.jpg" alt="Leitura no ambão" loading="lazy" /><figcaption>Primeira missa, 08/02/2025: leitura no ambão</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2025"><img src="capela_penha_2025_6.jpg" alt="Fiéis lotando a capela" loading="lazy" /><figcaption>Primeira missa, 08/02/2025: fiéis lotando a capela</figcaption></figure>
+      <figure class="x-lb__slide" data-album="penha2025"><img src="capela_penha_2025_7.jpg" alt="Celebrantes no altar" loading="lazy" /><figcaption>Primeira missa, 08/02/2025: celebrantes no altar</figcaption></figure>
       <figure class="x-lb__slide"><img src="fachada.png" alt="Fachada da Igreja Matriz São Luiz Gonzaga" loading="lazy" /><figcaption>Igreja Matriz</figcaption></figure>
       <figure class="x-lb__slide"><img src="h_interior.jpg" alt="Interior da igreja decorado" loading="lazy" /><figcaption>Nossa igreja em festa</figcaption></figure>
       <figure class="x-lb__slide"><img src="h_painel_cristo.jpg" alt="Painel do Cristo no Trono Divino com os apóstolos" loading="lazy" /><figcaption>Painel do Cristo</figcaption></figure>

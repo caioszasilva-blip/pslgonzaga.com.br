@@ -359,6 +359,9 @@
       .x-stack .x-duo { margin: 0; }
       .x-gal--3 { grid-template-columns: repeat(2, 1fr); }
       @media (min-width: 900px) { .x-gal--3 { grid-template-columns: repeat(3, 1fr); } }
+      .x-gal--mini { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; }
+      .x-gal--mini .x-photo__img { border-radius: 10px; }
+      .x-tl__media .x-gal--mini img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; box-shadow: none; }
       .x-tl__card .x-tl__more { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-weight: 700; color: var(--x-ochre); }
       .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
       .x-tags li { padding: 4px 12px; border-radius: 999px; background: var(--x-cream); font-size: 13px; }
@@ -1450,6 +1453,29 @@
                 </div>
               </li>
               <li class="x-tl__item">
+                <div class="x-tl__media x-stack">
+                  <figure class="x-whole">
+                    <img src="altar_2007_1.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli e padres diante do altar, sob o painel do Cristo" loading="lazy" />
+                    <figcaption>Consagração do Altar, 2007</figcaption>
+                  </figure>
+                  <ul class="x-gal--mini" aria-label="Mais fotos da Consagração do Altar, 2007">
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="0" aria-label="Ampliar foto: procissão de entrada"><span class="x-photo__img"><img src="altar_2007_2.jpg" alt="Consagração do Altar em 2007: procissão de entrada pelo corredor, com a igreja cheia" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="1" aria-label="Ampliar foto: fiéis e coroinha na procissão"><span class="x-photo__img"><img src="altar_2007_3.jpg" alt="Consagração do Altar em 2007: fiéis e coroinha com imagem na procissão" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="2" aria-label="Ampliar foto: Dom Emílio no ambo"><span class="x-photo__img"><img src="altar_2007_4.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli, de mitra e báculo, falando no ambo" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="3" aria-label="Ampliar foto: bispo e clero no presbitério"><span class="x-photo__img"><img src="altar_2007_5.jpg" alt="Consagração do Altar em 2007: bispo e clero no presbitério" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="4" aria-label="Ampliar foto: o novo altar e o clero"><span class="x-photo__img"><img src="altar_2007_6.jpg" alt="Consagração do Altar em 2007: presbitério com o novo altar e o clero" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="5" aria-label="Ampliar foto: Dom Emílio junto ao altar"><span class="x-photo__img"><img src="altar_2007_7.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli junto ao altar" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="6" aria-label="Ampliar foto: incensação do altar"><span class="x-photo__img"><img src="altar_2007_8.jpg" alt="Consagração do Altar em 2007: incensação do altar sob o painel do Cristo" loading="lazy" /></span></button></li>
+                    <li><button class="x-photo" type="button" data-album="altar2007" data-i="7" aria-label="Ampliar foto: o altar consagrado"><span class="x-photo__img"><img src="altar_2007_9.jpg" alt="Consagração do Altar em 2007: vista do altar consagrado com o clero" loading="lazy" /></span></button></li>
+                  </ul>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">2007</span>
+                  <h3>Consagração do Altar</h3>
+                  <p>Em 2007, o altar da Paróquia São Luiz Gonzaga foi consagrado pelo Bispo Diocesano Dom Emílio Pignoli, juntamente com o Padre Edmundo da Mata e demais padres do clero diocesano.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
                 <div class="x-tl__media x-tl__media--year" aria-hidden="true">2008</div>
                 <div class="x-tl__card">
                   <span class="x-tl__date">08/06/2008</span>
@@ -1981,6 +2007,14 @@
       <figure class="x-lb__slide" data-album="penha"><img src="penha2026_11.jpg" alt="Imagem de N. Sra. da Penha no andor" loading="lazy" /><figcaption>Imagem de N. Sra. da Penha no andor</figcaption></figure>
       <figure class="x-lb__slide" data-album="penha"><img src="penha2026_12.jpg" alt="Coroinhas e comunidade na rua" loading="lazy" /><figcaption>Coroinhas e comunidade na rua</figcaption></figure>
       <figure class="x-lb__slide" data-album="penha"><img src="penha2026_13.jpg" alt="Coroinhas em frente à capela" loading="lazy" /><figcaption>Coroinhas em frente à capela</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_2.jpg" alt="Consagração do Altar em 2007: procissão de entrada pelo corredor, com a igreja cheia" loading="lazy" /><figcaption>Consagração do Altar, 2007: procissão de entrada</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_3.jpg" alt="Consagração do Altar em 2007: fiéis e coroinha com imagem na procissão" loading="lazy" /><figcaption>Consagração do Altar, 2007: fiéis e coroinha na procissão</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_4.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli, de mitra e báculo, falando no ambo" loading="lazy" /><figcaption>Consagração do Altar, 2007: Dom Emílio no ambo</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_5.jpg" alt="Consagração do Altar em 2007: bispo e clero no presbitério" loading="lazy" /><figcaption>Consagração do Altar, 2007: bispo e clero no presbitério</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_6.jpg" alt="Consagração do Altar em 2007: presbitério com o novo altar e o clero" loading="lazy" /><figcaption>Consagração do Altar, 2007: o novo altar e o clero</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_7.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli junto ao altar" loading="lazy" /><figcaption>Consagração do Altar, 2007: Dom Emílio junto ao altar</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_8.jpg" alt="Consagração do Altar em 2007: incensação do altar sob o painel do Cristo" loading="lazy" /><figcaption>Consagração do Altar, 2007: incensação do altar</figcaption></figure>
+      <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_9.jpg" alt="Consagração do Altar em 2007: vista do altar consagrado com o clero" loading="lazy" /><figcaption>Consagração do Altar, 2007: o altar consagrado</figcaption></figure>
       <figure class="x-lb__slide"><img src="fachada.png" alt="Fachada da Igreja Matriz São Luiz Gonzaga" loading="lazy" /><figcaption>Igreja Matriz</figcaption></figure>
       <figure class="x-lb__slide"><img src="h_interior.jpg" alt="Interior da igreja decorado" loading="lazy" /><figcaption>Nossa igreja em festa</figcaption></figure>
       <figure class="x-lb__slide"><img src="h_painel_cristo.jpg" alt="Painel do Cristo no Trono Divino com os apóstolos" loading="lazy" /><figcaption>Painel do Cristo</figcaption></figure>

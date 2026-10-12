@@ -580,6 +580,22 @@
       .x-viv__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
 
       @media (prefers-reduced-motion: reduce) { .x-viv__track { scroll-behavior: auto; } }
+      .x-viv > li.x-viv__feat-item { grid-column: 1 / -1; }
+      .x-viv__card.x-viv__feat { border: 2px solid var(--x-gold); box-shadow: var(--x-shadow); }
+      .x-viv__feat h3 { font-size: clamp(22px, 3.4vw, 30px); }
+      .x-viv__feat p { font-size: 16px; max-width: 72ch; }
+      @media (min-width: 860px) { .x-viv__feat .x-viv__track img { aspect-ratio: 16 / 9; } .x-viv__feat .x-viv__body { padding: 28px 32px 32px; } }
+
+      /* Featured notice below the hero */
+      .x-promo { position: relative; z-index: 2; background: var(--x-cream); padding: 20px 0 4px; }
+      .x-promo__card { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; padding: 18px 20px; border: 1px solid var(--x-line); border-left: 4px solid var(--x-gold); border-radius: 16px; background: #fff; box-shadow: var(--x-shadow); }
+      .x-promo__text { flex: 1 1 280px; min-width: 0; }
+      .x-promo__tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+      .x-promo__title { margin: 0; font: 700 clamp(18px, 2.6vw, 22px)/1.25 var(--x-serif); color: var(--x-brown); }
+      .x-promo__line { margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: var(--x-muted); }
+      .x-promo .x-btn { flex: none; }
+      @media (max-width: 599px) { .x-promo .x-btn { width: 100%; } }
+      @media (min-width: 1024px) { .x-promo { padding: 28px 0 8px; } .x-promo + .x-quick { padding-top: 20px; } .x-promo + .x-quick .x-quick__grid { margin-top: 0; } }
 
       /* Liturgia Diária */
       .x-lit { max-width: 860px; margin: 0 auto; overflow: hidden; border: 1px solid var(--x-line); border-radius: 24px; background: var(--x-cream-2); box-shadow: 0 4px 14px rgba(43, 26, 20, 0.05); }
@@ -740,6 +756,19 @@
             <a class="x-hero__wa" href="https://api.whatsapp.com/send?phone=5511955788539" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-wa" /></svg> Secretaria no WhatsApp · terça a sábado</a>
           </div>
           <p class="x-hero__credit">Foto: fachada da Igreja Matriz</p>
+        </section>
+
+        <section class="x-promo" aria-label="Destaque">
+          <div class="x-wrap">
+            <div class="x-promo__card">
+              <div class="x-promo__text">
+                <p class="x-promo__tags"><span class="x-viv__badge"><svg class="x-i"><use href="#i-star" /></svg> Destaque</span><span class="x-viv__date">12/10/2026</span></p>
+                <h2 class="x-promo__title">Festa de Nossa Senhora Aparecida</h2>
+                <p class="x-promo__line">Santa Missa presidida pelo Padre William Lima.</p>
+              </div>
+              <a class="x-btn x-btn--dark x-btn--sm" href="#destaque-aparecida">Ver fotos <svg class="x-i"><use href="#i-arrow" /></svg></a>
+            </div>
+          </div>
         </section>
 
         <section class="x-quick" aria-label="Informações rápidas">
@@ -1035,8 +1064,8 @@
               <h2>Momentos recentes da nossa comunidade</h2>
             </div>
             <ul class="x-viv">
-              <li>
-                <article class="x-viv__card">
+              <li class="x-viv__feat-item">
+                <article class="x-viv__card x-viv__feat" id="destaque-aparecida">
                   <div class="x-viv__media">
                     <div class="x-viv__track" tabindex="0" aria-label="Fotos da Festa de Nossa Senhora Aparecida">
                       <img src="aparecida1.jpg" alt="Festa de Nossa Senhora Aparecida na paróquia" loading="lazy" />
@@ -1045,7 +1074,7 @@
                     <span class="x-viv__count">1 / 2</span>
                   </div>
                   <div class="x-viv__body">
-                    <div class="x-viv__tags"><span class="x-viv__date">12/10/2026</span></div>
+                    <div class="x-viv__tags"><span class="x-viv__date">12/10/2026</span><span class="x-viv__badge"><svg class="x-i"><use href="#i-star" /></svg> Destaque</span></div>
                     <h3>Festa de Nossa Senhora Aparecida</h3>
                     <p>Com muita alegria, a paróquia celebrou a festa de Nossa Senhora da Conceição Aparecida, Padroeira do Brasil, com Santa Missa presidida pelo Padre William Lima. “Fazei tudo o que Ele disser!” Viva a mãe de Deus! E um feliz Dia das Crianças!</p>
                     <div class="x-viv__links">

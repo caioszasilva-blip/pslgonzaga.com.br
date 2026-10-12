@@ -774,7 +774,7 @@
                 <h2 class="x-promo__title">Festa de Nossa Senhora Aparecida</h2>
                 <p class="x-promo__line">Santa Missa presidida pelo Padre William Lima.</p>
               </div>
-              <a class="x-btn x-btn--dark x-btn--sm" href="#destaque-aparecida">Ver fotos <svg class="x-i"><use href="#i-arrow" /></svg></a>
+              <button class="x-btn x-btn--dark x-btn--sm" type="button" data-lb-open data-album="aparecida" data-i="0" aria-label="Ver fotos da Festa de Nossa Senhora Aparecida">Ver fotos <svg class="x-i"><use href="#i-arrow" /></svg></button>
             </div>
           </div>
         </section>
@@ -2769,7 +2769,7 @@
           document.body.classList.remove("x-lock");
           if (last) last.focus();
         }
-        [].forEach.call(document.querySelectorAll(".x-photo"), function (b) {
+        [].forEach.call(document.querySelectorAll(".x-photo, [data-lb-open]"), function (b) {
           b.addEventListener("click", function () { setAlbum(albumOf(b)); open(+b.getAttribute("data-i")); });
         });
         lb.addEventListener("click", function (e) {

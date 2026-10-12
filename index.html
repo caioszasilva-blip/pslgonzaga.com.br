@@ -346,6 +346,12 @@
       .x-part--sub h4 { font: 700 clamp(20px, 3vw, 26px)/1.3 var(--x-serif); color: var(--x-ochre); }
       .x-tl__media .x-whole img { width: auto; max-width: 100%; max-height: 460px; aspect-ratio: auto; object-fit: contain; margin: 0 auto; display: block; }
       .x-fecho { max-width: 720px; margin: 48px auto 0; padding: 28px 24px; border-left: 3px solid var(--x-gold); background: #fff; border-radius: 0 16px 16px 0; box-shadow: var(--x-shadow); font: italic 500 clamp(17px, 2.2vw, 20px)/1.55 var(--x-serif); color: var(--x-brown); }
+      .x-sino { display: grid; gap: 20px; justify-items: center; max-width: 880px; margin: 40px auto; padding: 24px; border-left: 3px solid var(--x-gold); border-radius: 0 18px 18px 0; background: var(--x-cream-2); box-shadow: var(--x-shadow); }
+      .x-sino__media { margin: 0; }
+      .x-sino__media img { display: block; width: auto; height: auto; max-width: min(240px, 100%); border-radius: 12px; box-shadow: var(--x-shadow); }
+      .x-sino__text h3 { margin: 0 0 12px; font: 700 20px/1.3 var(--x-serif); color: var(--x-brown); }
+      .x-sino__text p + p { margin-top: 10px; }
+      @media (min-width: 768px) { .x-sino { grid-template-columns: auto 1fr; align-items: center; justify-items: start; gap: 32px; padding: 28px 32px; margin: 56px auto; } }
       .x-fontes { max-width: 720px; margin: 24px auto 0; font-size: 13px; color: var(--x-muted); }
       .x-fontes h5 { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--x-ochre); }
       .x-fontes ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 4px; }
@@ -1524,6 +1530,19 @@
                   <p>Com a demolição, a imagem de Nossa Senhora da Penha, de Marino Del Favero, foi transferida para a Paróquia São Luiz Gonzaga, junto com os dois sinos de bronze do campanário da Penhinha. A paróquia tornou-se fiel depositária desse patrimônio, assumindo sua guarda e preservação. A imagem e os sinos são um elo entre as antigas gerações de fiéis e a comunidade que continua no Jardim São Luiz.</p>
                 </div>
               </li>
+            </ol>
+            <aside class="x-sino" aria-labelledby="x-sino-title">
+              <figure class="x-sino__media">
+                <img src="penhinha_sino_1904.jpg" alt="Sino de bronze de 1904 da antiga Capela Nossa Senhora da Penha, com a inscrição da Fábrica de Pólvora Estrella" width="240" height="320" loading="lazy" />
+              </figure>
+              <div class="x-sino__text">
+                <h3 id="x-sino-title">Sino histórico da Capela Nossa Senhora da Penha (1904)</h3>
+                <p>O sino que atualmente integra o acervo da Paróquia São Luiz Gonzaga pertenceu originalmente à antiga Capela Nossa Senhora da Penha, localizada onde hoje se encontra o Supermercado Extra.</p>
+                <p>Fabricado em 1904 pela Fábrica de Pólvora Estrella, pertencente à família Dias, o sino é um importante testemunho da história e da religiosidade da região da Penhinha, cuja formação antecede o surgimento do bairro Jardim São Luiz.</p>
+                <p>É importante destacar que o sino não foi produzido para marcar a fundação do Jardim São Luiz, mas para integrar a Capela Nossa Senhora da Penha, preservando, assim, parte da memória histórica e religiosa da comunidade.</p>
+              </div>
+            </aside>
+            <ol class="x-tl">
               <li class="x-tl__item">
                 <div class="x-tl__media x-tl__media--year" aria-hidden="true">1893</div>
                 <div class="x-tl__card">

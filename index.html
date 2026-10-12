@@ -377,6 +377,10 @@
       .x-tl__media .x-gal .x-photo img { aspect-ratio: 4 / 3; }
       .x-tl__media .x-gal--vert { align-items: start; }
       .x-tl__media .x-gal--vert .x-photo img { aspect-ratio: auto; height: auto; object-fit: contain; }
+      .x-doc { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: start; }
+      .x-doc__side { display: grid; gap: 12px; }
+      .x-tl__media .x-doc .x-photo img { aspect-ratio: auto; height: auto; object-fit: contain; }
+      .x-tl__media .x-doc .x-photo:hover img { transform: none; }
       .x-tl__card .x-tl__more { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font-weight: 700; color: var(--x-ochre); }
       .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
       .x-tags li { padding: 4px 12px; border-radius: 999px; background: var(--x-cream); font-size: 13px; }
@@ -1371,14 +1375,27 @@
                 </div>
               </li>
               <li class="x-tl__item">
-                <figure class="x-tl__media">
-                  <img src="h_cardeal.jpg" alt="Cardeal Carlos Carmelo de Vasconcellos Motta" />
-                  <figcaption>Cardeal Carlos Carmelo de Vasconcellos Motta</figcaption>
-                </figure>
+                <div class="x-tl__media x-doc">
+                  <figure>
+                    <button class="x-photo" type="button" data-album="decreto1960" data-i="0" aria-label="Ampliar foto: Decreto de criação da Paróquia: limites e data de criação"><span class="x-photo__img"><img src="decreto_1960_1.jpg" alt="Folha datilografada do decreto de criação da Paróquia de Jardim São Luís (São Luís de Gonzaga), com os limites paroquiais e a data de criação 21/4/1960" loading="lazy" /></span></button>
+                    <figcaption>Decreto de criação da Paróquia: limites e data de criação</figcaption>
+                  </figure>
+                  <div class="x-doc__side">
+                    <figure>
+                      <button class="x-photo" type="button" data-album="decreto1960" data-i="1" aria-label="Ampliar foto: Decreto assinado em 30 de outubro de 1960, Festa de Cristo Rei"><span class="x-photo__img"><img src="decreto_1960_2.jpg" alt="Página final do decreto de criação da Paróquia São Luís de Gonzaga, assinada na Cúria Metropolitana de São Paulo em 30 de outubro de 1960" loading="lazy" /></span></button>
+                      <figcaption>Decreto assinado em 30 de outubro de 1960, Festa de Cristo Rei</figcaption>
+                    </figure>
+                    <figure>
+                      <img src="h_cardeal.jpg" alt="Cardeal Carlos Carmelo de Vasconcellos Motta" />
+                      <figcaption>Cardeal Carlos Carmelo de Vasconcellos Motta</figcaption>
+                    </figure>
+                  </div>
+                </div>
                 <div class="x-tl__card">
                   <span class="x-tl__date">30 de outubro de 1960 · Cristo Rei</span>
                   <h3>A capela torna-se Paróquia</h3>
                   <p>Na Festa de Cristo Rei, o Cardeal Carlos Carmelo de Vasconcellos Motta elevou a capela a Paróquia e nomeou interinamente o Pe. Fabiano S. Cochel.</p>
+                  <p>O decreto de criação desmembrou a nova paróquia das Paróquias de Nossa Senhora do Carmo, de Capão Redondo, e de Santo Amaro, e deu-lhe por padroeiro e titular São Luís de Gonzaga. A ficha das Divisas Paroquiais (Livro nº 1, pág. 29) registra a criação em 21 de abril de 1960; o decreto foi assinado na Cúria Metropolitana de São Paulo em 30 de outubro de 1960, Festa de Cristo Rei.</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -2401,6 +2418,8 @@
       <figure class="x-lb__slide" data-album="vitrais2026"><img src="vitrais_2026_3.jpg" alt="Troca dos vitrais em março de 2026: fileira de novos vitrais dourados de vidro na nave, acima dos bancos" loading="lazy" /><figcaption>Os novos vitrais da nave</figcaption></figure>
       <figure class="x-lb__slide" data-album="pinturas2026"><img src="pinturas_2026_2.jpg" alt="Revitalização das pinturas sacras em 2026: Padre Lázaro, de óculos e camisa bege, com outra pessoa diante das pinturas sacras" loading="lazy" /><figcaption>Padre Lázaro, autor das pinturas sacras</figcaption></figure>
       <figure class="x-lb__slide" data-album="pinturas2026"><img src="pinturas_2026_3.jpg" alt="Revitalização das pinturas sacras em 2026: Padre Lázaro de pé diante da pintura de Nossa Senhora na igreja" loading="lazy" /><figcaption>Padre Lázaro diante da pintura de Nossa Senhora</figcaption></figure>
+      <figure class="x-lb__slide" data-album="decreto1960"><img src="decreto_1960_1.jpg" alt="Folha datilografada do decreto de criação da Paróquia de Jardim São Luís (São Luís de Gonzaga), com os limites paroquiais e a data de criação 21/4/1960" loading="lazy" /><figcaption>Decreto de criação da Paróquia: limites e data de criação</figcaption></figure>
+      <figure class="x-lb__slide" data-album="decreto1960"><img src="decreto_1960_2.jpg" alt="Página final do decreto de criação da Paróquia São Luís de Gonzaga, assinada na Cúria Metropolitana de São Paulo em 30 de outubro de 1960" loading="lazy" /><figcaption>Decreto assinado em 30 de outubro de 1960, Festa de Cristo Rei</figcaption></figure>
       <figure class="x-lb__slide" data-album="edmundo"><img src="h_pe_edmundo.jpg" alt="Padre Edmundo da Mata com fiéis na escadaria" loading="lazy" /><figcaption>Padre Edmundo da Mata</figcaption></figure>
       <figure class="x-lb__slide" data-album="edmundo"><img src="pe_edmundo_papa_jpii.jpg" alt="Padre Edmundo da Mata cumprimenta o Papa São João Paulo II em Roma" loading="lazy" /><figcaption>Pe. Edmundo da Mata recebido pelo Papa João Paulo II, em Roma · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="penha1973"><img src="penhinha_imagem_flores.jpg" alt="Imagem de Nossa Senhora da Penha entre flores brancas" loading="lazy" /><figcaption>A imagem de Nossa Senhora da Penha entre flores</figcaption></figure>

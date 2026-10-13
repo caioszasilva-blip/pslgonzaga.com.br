@@ -2671,7 +2671,7 @@
         window.addEventListener("resize", function () { if (window.innerWidth >= 1100) setOpen(false); });
 
         var links = [].slice.call(document.querySelectorAll(".x-menu a"));
-        var map = { top: "top", horarios: "horarios", noticias: "noticias", "vida-paroquia": "vida-paroquia", liturgia: "liturgia", historia: "historia", vida: "vida", doacoes: "doacoes", galeria: "galeria", contato: "contato" };
+        var map = { top: "top", padroeiro: "padroeiro", horarios: "horarios", noticias: "noticias", "vida-paroquia": "vida-paroquia", liturgia: "liturgia", historia: "historia", vida: "vida", doacoes: "doacoes", galeria: "galeria", contato: "contato" };
         var secs = Object.keys(map).map(function (id) { return document.getElementById(id === "top" ? "boas-vindas" : id); });
         function onScroll() {
           var y = window.scrollY + 140, cur = "top";

@@ -392,6 +392,7 @@
       /* Clergy */
       .x-clergy { display: grid; gap: 24px; grid-template-columns: 1fr; max-width: 820px; margin: 0 auto; }
       @media (min-width: 600px) { .x-clergy { grid-template-columns: 1fr 1fr; } }
+      @media (min-width: 900px) { .x-clergy--mem { max-width: 1040px; grid-template-columns: repeat(3, 1fr); } }
       .x-priest { overflow: hidden; border-radius: 22px; background: var(--x-cream-2); border: 1px solid var(--x-line); text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
       .x-priest:hover { transform: translateY(-4px); box-shadow: var(--x-shadow-lg); }
       .x-priest__img { overflow: hidden; }
@@ -2489,7 +2490,7 @@
               <span class="x-eyebrow">Memória</span>
               <h2>Os padres que passaram pela paróquia.</h2>
             </div>
-            <div class="x-clergy">
+            <div class="x-clergy x-clergy--mem">
               <article class="x-priest">
                 <div class="x-priest__img"><img src="h_dom_joel_retrato.jpg" alt="Dom Joel Ivo Catapan, de batina e cruz peitoral" loading="lazy" /></div>
                 <div class="x-priest__body"><span class="x-eyebrow">1º pároco · 1960 a 1964</span><h3>Dom Joel Ivo Catapan</h3><small><em>† In memoriam</em></small></div>
@@ -2497,6 +2498,10 @@
               <article class="x-priest">
                 <div class="x-priest__img"><img src="pe_edmundo_memoria.jpg" alt="Padre Edmundo da Mata, paramentado e sorridente" loading="lazy" /></div>
                 <div class="x-priest__body"><span class="x-eyebrow">Pároco · 1964 a 2022</span><h3>Pe. Edmundo da Mata</h3><small><em>† In memoriam</em></small></div>
+              </article>
+              <article class="x-priest">
+                <div class="x-priest__img"><img src="h_pe_decio.jpg" alt="Padre Décio Fogagnolli Júnior, de túnica branca e estola" loading="lazy" /></div>
+                <div class="x-priest__body"><span class="x-eyebrow">Vigário paroquial · 2001 a 2011</span><h3>Pe. Décio Fogagnolli Júnior</h3></div>
               </article>
             </div>
             <div class="x-memoria" id="padres-paroquia" style="max-width:720px">

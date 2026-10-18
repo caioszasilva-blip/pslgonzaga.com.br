@@ -828,19 +828,6 @@
           <ol class="x-dest__dots" aria-hidden="true"></ol>
         </div>
 
-        <section class="x-promo" id="destaque-cerco" aria-label="Destaque">
-          <div class="x-wrap">
-            <div class="x-promo__card">
-              <a class="x-photo x-promo__photo" href="#cerco-jerico" aria-label="Ver o Cerco de Jericó"><span class="x-photo__img"><img src="cerco_jerico_2026.jpg" alt="Ostensório com o Santíssimo Sacramento iluminado, diante de fiéis com velas" /></span></a>
-              <div class="x-promo__text">
-                <p class="x-promo__tags"><span class="x-viv__badge"><svg class="x-i"><use href="#i-star" /></svg> Destaque</span><span class="x-viv__date">24 a 30/10/2026</span></p>
-                <h2 class="x-promo__title">Cerco de Jericó</h2>
-                <p class="x-promo__line">Todos os dias às 19h30 · domingo, 25/10, às 18h00 · Igreja Matriz</p>
-              </div>
-              <a class="x-btn x-btn--dark x-btn--sm" href="#cerco-jerico">Saiba mais <svg class="x-i"><use href="#i-arrow" /></svg></a>
-            </div>
-          </div>
-        </section>
         <section class="x-anniv" id="aniversario" aria-labelledby="aniversario-titulo">
           <div class="x-wrap">
             <article class="x-anniv__card">
@@ -1237,7 +1224,7 @@
                 </article>
               </li>
               <li>
-                <article class="x-viv__card">
+                <article class="x-viv__card" data-destaque="nao">
                   <div class="x-viv__media">
                     <div class="x-viv__track x-viv__track--top" tabindex="0" aria-label="Fotos da Festa de Nossa Senhora da Penha">
                       <img src="penha1.jpg" alt="Festa de Nossa Senhora da Penha na Capela" loading="lazy" />
@@ -1257,7 +1244,7 @@
                 </article>
               </li>
               <li>
-                <article class="x-viv__card">
+                <article class="x-viv__card" data-destaque="nao">
                   <div class="x-viv__media">
                     <div class="x-viv__track" tabindex="0" aria-label="Fotos do polimento do piso da Igreja Matriz">
                       <img src="piso1.jpg" alt="Interior da Igreja Matriz com a máquina de polimento no piso" loading="lazy" />
@@ -1280,7 +1267,7 @@
                 </article>
               </li>
               <li>
-                <article class="x-viv__card">
+                <article class="x-viv__card" data-destaque="nao">
                   <div class="x-viv__media">
                     <div class="x-viv__track" tabindex="0" aria-label="Fotos da Visita Pastoral do Bispo Diocesano">
                       <img src="bispo1.jpg" alt="Dom Valdir José de Castro durante a Visita Pastoral à paróquia" loading="lazy" />
@@ -3398,6 +3385,7 @@
           if (!t) return;
           n++;
           if (!c.id) { var k = n; while (document.getElementById("viv-" + k)) k++; c.id = "viv-" + k; }
+          if (c.getAttribute("data-destaque") === "nao") return;
           items.push({ id: c.id, tag: txt(c.querySelector(".x-viv__date")), icon: "i-cal", img: imgOf(c), text: t, desc: txt(c.querySelector(".x-viv__body > p") || c.querySelector("h3 ~ p")) });
         });
         if (!items.length) { bar.hidden = true; return; }

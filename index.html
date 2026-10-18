@@ -706,6 +706,22 @@
       }
       @media (max-width: 360px) { .x-dest__thumb { max-height: 180px; } }
       @media (prefers-reduced-motion: reduce) { .x-dest__card, .x-dest__btn, .x-dest__dots li { transition: none; } }
+      /* Header strip: Forania line, attached to the sticky header */
+      :root { --x-strip: 30px; --x-top: calc(var(--x-head) + var(--x-strip)); }
+      @media (min-width: 768px) { :root { --x-strip: 32px; } }
+      .x-strip { display: flex; align-items: center; justify-content: center; min-height: var(--x-strip); margin: 0; padding: 4px 16px; box-sizing: border-box; background: #24150f; border-top: 1px solid rgba(201, 162, 39, 0.55); font: 600 12px/1.3 var(--x-sans); letter-spacing: 0.12em; text-transform: uppercase; text-align: center; color: var(--x-gold); }
+      @media (max-width: 360px) { .x-strip { letter-spacing: 0.06em; } }
+      @media (min-width: 768px) { .x-strip { font-size: 13px; letter-spacing: 0.18em; } }
+      html { scroll-padding-top: calc(var(--x-top) + 12px); }
+      .x-drawer { top: var(--x-top); }
+      .x-feat, .x-anniv, .x-int { scroll-margin-top: calc(var(--x-top) + 12px); }
+      @media (min-width: 900px) { .x-saint__fig { top: calc(var(--x-top) + 24px); } }
+      .x-sr-only { position: absolute !important; top: 0; left: 0; width: 100%; margin: 0; padding: 0; font-size: 12px; line-height: 1.3; white-space: normal; overflow-wrap: anywhere; color: #fff; text-shadow: none; clip-path: inset(50%); pointer-events: none; user-select: none; border: 0; }
+      /* Hero: photo fills the card again; only a bottom gradient for the buttons */
+      .x-hero { min-height: calc(100vh - var(--x-top)); min-height: calc(100svh - var(--x-top)); }
+      .x-hero__img, .x-hero .x-hero__img { top: 0; bottom: 0; height: 100%; object-fit: cover; object-position: center 40%; -webkit-mask-image: none; mask-image: none; }
+      .x-hero__shade { background: linear-gradient(180deg, rgba(43, 26, 20, 0) 0%, rgba(43, 26, 20, 0) 50%, rgba(43, 26, 20, 0.55) 72%, rgba(20, 12, 9, 0.9) 100%); }
+      .x-hero__copy { justify-content: flex-end; min-height: calc(100vh - var(--x-top)); min-height: calc(100svh - var(--x-top)); }
     </style>
   </head>
   <body class="x-body">
@@ -770,6 +786,7 @@
           </nav>
           <button class="x-burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="x-drawer"><span></span><span></span><span></span></button>
         </div>
+        <p class="x-strip">Forania São Luiz · Diocese de Campo Limpo</p>
       </header>
       <div class="x-drawer" id="x-drawer">
         <nav aria-label="Menu">
@@ -797,12 +814,7 @@
           <img class="x-hero__img" src="hero2.jpg" alt="Fachada da Igreja Matriz São Luiz Gonzaga à noite, com a cruz vermelha iluminada" />
           <div class="x-hero__shade"></div>
           <div class="x-hero__copy">
-            <div class="x-hero__top">
-              <h1 class="x-hero__title">PARÓQUIA SÃO LUIZ GONZAGA</h1>
-              <p class="x-eyebrow x-hero__line">Forania São Luiz - Diocese de Campo Limpo</p>
-              <div class="x-rule"><svg class="x-i"><use href="#i-cross" /></svg></div>
-              <p class="x-hero__tagline">O Coração do Jardim São Luís.</p>
-            </div>
+            <h1 class="x-sr-only">Paróquia São Luiz Gonzaga — O Coração do Jardim São Luís</h1>
             <div class="x-hero__bottom">
             <div class="x-hero__actions">
               <a class="x-btn x-btn--gold" href="#horarios"><svg class="x-i"><use href="#i-clock" /></svg> Horários de missa</a>

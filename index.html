@@ -621,6 +621,14 @@
       .x-hero__copy { width: 100%; max-width: none; box-sizing: border-box; }
       .x-hero h1.x-hero__title { font-size: clamp(1rem, 4vw, 4.25rem); white-space: nowrap; overflow-wrap: normal; letter-spacing: 0.01em; }
       .x-hero__tagline { max-width: none; font-size: clamp(0.95rem, 4.2vw, 2.5rem); white-space: nowrap; }
+      /* Hero layout: title block at the top, actions at the bottom, cross clear in between */
+      .x-hero { place-items: stretch; }
+      .x-hero__img { top: 17%; bottom: 0; height: auto; object-position: center bottom; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%); mask-image: linear-gradient(180deg, transparent 0, #000 14%); }
+      @media (orientation: landscape) { .x-hero__img { top: 20%; object-position: center top; } }
+      .x-hero__shade { background: linear-gradient(180deg, rgba(20, 12, 9, 0.9) 0%, rgba(43, 26, 20, 0.7) 18%, rgba(43, 26, 20, 0.35) 34%, rgba(43, 26, 20, 0.45) 62%, rgba(43, 26, 20, 0.9) 100%); }
+      .x-hero__copy { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; min-height: calc(100vh - var(--x-head)); min-height: calc(100svh - var(--x-head)); padding: 6vh 20px calc(92px + env(safe-area-inset-bottom, 0px)); padding: 6svh 20px calc(92px + env(safe-area-inset-bottom, 0px)); }
+      .x-hero__bottom { display: flex; flex-direction: column; align-items: center; }
+      .x-hero__bottom .x-hero__actions { margin-top: 0; }
       .x-header .x-brand > span { min-width: 0; }
       .x-brand__name { white-space: nowrap; font-size: clamp(12px, 3.5vw, 15px); overflow: hidden; text-overflow: ellipsis; }
       @media (min-width: 1100px) { .x-brand__name { font-size: 16px; } }
@@ -789,16 +797,19 @@
           <img class="x-hero__img" src="hero2.jpg" alt="Fachada da Igreja Matriz São Luiz Gonzaga à noite, com a cruz vermelha iluminada" />
           <div class="x-hero__shade"></div>
           <div class="x-hero__copy">
-            <h1 class="x-hero__title">PARÓQUIA SÃO LUIZ GONZAGA</h1>
-            <p class="x-eyebrow x-hero__line">Forania São Luiz - Diocese de Campo Limpo</p>
-            <div class="x-rule"><svg class="x-i"><use href="#i-cross" /></svg></div>
-            <p class="x-hero__tagline">O Coração do Jardim São Luís.</p>
-            <p class="x-hero__sub">Sejam bem-vindos à nossa Paróquia!</p>
+            <div class="x-hero__top">
+              <h1 class="x-hero__title">PARÓQUIA SÃO LUIZ GONZAGA</h1>
+              <p class="x-eyebrow x-hero__line">Forania São Luiz - Diocese de Campo Limpo</p>
+              <div class="x-rule"><svg class="x-i"><use href="#i-cross" /></svg></div>
+              <p class="x-hero__tagline">O Coração do Jardim São Luís.</p>
+            </div>
+            <div class="x-hero__bottom">
             <div class="x-hero__actions">
               <a class="x-btn x-btn--gold" href="#horarios"><svg class="x-i"><use href="#i-clock" /></svg> Horários de missa</a>
               <a class="x-btn x-btn--ghost" href="#doacoes"><svg class="x-i"><use href="#i-heart" /></svg> Doe via PIX</a>
             </div>
             <a class="x-hero__wa" href="https://api.whatsapp.com/send?phone=5511955788539" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-wa" /></svg> Secretaria no WhatsApp · terça a sábado</a>
+            </div>
           </div>
           <p class="x-hero__credit">Foto: fachada da Igreja Matriz</p>
         </section>

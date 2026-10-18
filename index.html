@@ -276,6 +276,10 @@
       .x-feat__img.x-feat__seal { display: grid; place-content: center; gap: 8px; min-height: 220px; padding: 28px; background: var(--x-brown); text-align: center; }
       .x-feat__seal b { font: 700 clamp(48px, 9vw, 72px)/1 var(--x-serif); color: var(--x-gold); }
       .x-feat__seal span { font-size: 14px; font-weight: 700; letter-spacing: 0.22em; color: var(--x-cream); }
+      .x-anniv__photo { width: 100%; margin: 0; }
+      .x-anniv__seal .x-anniv__photo img { display: block; box-sizing: border-box; width: 100%; height: auto; padding: 0; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border: 3px solid var(--x-gold); border-radius: 16px; background: var(--x-cream); }
+      .x-anniv__photo figcaption { margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--x-cream); text-align: center; }
+      .x-feat__img.x-feat__photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center; }
 
       /* Church news (Diocese + CNBB) */
       .x-sec--paper { background: var(--x-cream-2); border-top: 1px solid var(--x-line); }
@@ -832,7 +836,10 @@
           <div class="x-wrap">
             <article class="x-anniv__card">
               <div class="x-anniv__seal">
-                <img src="brasao_centralizado.jpg" alt="Brasão da Paróquia São Luiz Gonzaga" />
+                <figure class="x-anniv__photo">
+                  <img class="x-anniv__hist" src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" />
+                  <figcaption>Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos</figcaption>
+                </figure>
                 <p><span class="x-anniv__fig">66 anos</span><span class="x-anniv__years">1960 – 2026</span></p>
               </div>
               <div class="x-anniv__body">
@@ -845,6 +852,7 @@
                 </ul>
                 <div class="x-anniv__actions">
                   <a class="x-btn x-btn--ghost" href="https://api.whatsapp.com/send?text=Em%2030%20de%20outubro%20de%202026%2C%20a%20Par%C3%B3quia%20S%C3%A3o%20Luiz%20Gonzaga%20completa%2066%20anos%20de%20hist%C3%B3ria%21%20https%3A%2F%2Fpsluizgonzaga.com.br" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-wa" /></svg> Compartilhar no WhatsApp</a>
+                  <a class="x-btn x-btn--gold" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
                 </div>
               </div>
             </article>
@@ -1057,10 +1065,9 @@
               <h2>Acompanhe as novidades, avisos e eventos da paróquia.</h2>
             </div>
             <article class="x-feat" id="noticia-66-anos">
-              <div class="x-feat__img x-feat__seal" aria-hidden="true">
-                <b>66 anos</b>
-                <span>1960 – 2026</span>
-              </div>
+              <figure class="x-feat__img x-feat__photo">
+                <img src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" />
+              </figure>
               <div class="x-feat__body">
                 <span class="x-feat__tag">Aniversário da Paróquia</span>
                 <h3>66 anos da Paróquia São Luiz Gonzaga</h3>
@@ -1070,6 +1077,7 @@
                 <p class="x-feat__text">São 66 anos de fé, oração e comunidade. Venha agradecer a Deus conosco!</p>
                 <div class="x-feat__actions">
                   <a class="x-btn x-btn--dark" href="#aniversario"><svg class="x-i"><use href="#i-arrow" /></svg> Ver destaque</a>
+                  <a class="x-btn x-btn--line" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
                 </div>
               </div>
             </article>

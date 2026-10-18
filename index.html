@@ -562,6 +562,8 @@
 
       @media (prefers-reduced-motion: reduce) { .x-viv__track { scroll-behavior: auto; } }
       .x-viv > li.x-viv__feat-item { grid-column: 1 / -1; }
+      .x-viv__card .x-viv__when { display: flex; gap: 8px; align-items: flex-start; font-weight: 600; color: var(--x-brown); }
+      .x-viv__when .x-i { flex: none; width: 18px; height: 18px; margin-top: 3px; color: var(--x-ochre); }
       .x-viv__card.x-viv__feat { border: 2px solid var(--x-gold); box-shadow: var(--x-shadow); }
       .x-viv__feat h3 { font-size: clamp(22px, 3.4vw, 30px); }
       .x-viv__feat p { font-size: 16px; max-width: 72ch; }
@@ -652,9 +654,6 @@
       .x-dd:hover .x-dd__menu, .x-dd:focus-within .x-dd__menu { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
       .x-header .x-menu .x-dd__menu a { display: block; padding: 10px 12px; }
       .x-header .x-menu .x-dd__menu a::after { display: none; }
-      .x-cerco { margin-top: 28px; }
-      .x-cerco__photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 18px; border: 1px solid rgba(201, 162, 39, 0.45); }
-      @media (min-width: 860px) { .x-cerco.x-anniv__card { grid-template-columns: minmax(260px, 380px) 1fr; } }
 
       /* Carrossel de destaques */
       .x-dest { padding: 28px 0 22px; background: var(--x-cream-2); border-bottom: 1px solid var(--x-line); }
@@ -749,7 +748,7 @@
             <div class="x-dd">
               <a href="#noticias" class="x-dd__btn" aria-haspopup="true">Notícias <svg class="x-dd__car" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></a>
               <div class="x-dd__menu">
-                <a href="#noticias">Da Paróquia</a>
+                <a href="#noticias">Avisos paroquiais</a>
                 <a href="#igreja">Da Igreja</a>
               </div>
             </div>
@@ -769,7 +768,7 @@
           <a href="#top">Início <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#padroeiro">Padroeiro <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#horarios">Horários <svg class="x-i"><use href="#i-arrow" /></svg></a>
-          <a href="#noticias">Notícias <svg class="x-i"><use href="#i-arrow" /></svg></a>
+          <a href="#noticias">Avisos <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#vida-paroquia">Vida da Paróquia <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#liturgia">Liturgia Diária <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#igreja">Notícias da Igreja <svg class="x-i"><use href="#i-arrow" /></svg></a>
@@ -837,21 +836,6 @@
                   <a class="x-btn x-btn--ghost" href="https://api.whatsapp.com/send?text=Em%2030%20de%20outubro%20de%202026%2C%20a%20Par%C3%B3quia%20S%C3%A3o%20Luiz%20Gonzaga%20completa%2066%20anos%20de%20hist%C3%B3ria%21%20https%3A%2F%2Fpsluizgonzaga.com.br" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-wa" /></svg> Compartilhar no WhatsApp</a>
                   <a class="x-btn x-btn--gold" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
                 </div>
-              </div>
-            </article>
-            <article class="x-anniv__card x-cerco" id="cerco-jerico" aria-labelledby="cerco-titulo">
-              <div class="x-cerco__photo">
-                <img src="cerco_jerico_2026.jpg" alt="Ostensório com o Santíssimo Sacramento iluminado, diante de fiéis com velas" loading="lazy" />
-              </div>
-              <div class="x-anniv__body">
-                <span class="x-anniv__tag">Em breve</span>
-                <h2 id="cerco-titulo">Cerco de Jericó</h2>
-                <p class="x-anniv__text">Sete dias de oração e adoração diante do Santíssimo Sacramento. Traga suas intenções e venha rezar conosco.</p>
-                <ul class="x-anniv__when">
-                  <li><svg class="x-i"><use href="#i-cal" /></svg> De 24 a 30 de outubro de 2026</li>
-                  <li><svg class="x-i"><use href="#i-clock" /></svg> Todos os dias às 19h30 · domingo, 25/10, às 18h00</li>
-                  <li><svg class="x-i"><use href="#i-pin" /></svg> Igreja Matriz – Rua Antônio da Mata Júnior, 80</li>
-                </ul>
               </div>
             </article>
           </div>
@@ -1047,23 +1031,6 @@
               <span class="x-eyebrow">Avisos paroquiais</span>
               <h2>Acompanhe os avisos de nossa paróquia.</h2>
             </div>
-            <article class="x-feat" id="noticia-66-anos">
-              <figure class="x-feat__img x-feat__photo">
-                <img src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" />
-              </figure>
-              <div class="x-feat__body">
-                <span class="x-feat__tag">Aniversário da Paróquia</span>
-                <h3>66 anos da Paróquia São Luiz Gonzaga</h3>
-                <ul class="x-feat__meta">
-                  <li><svg class="x-i"><use href="#i-cal" /></svg> Sexta-feira, 30 de outubro de 2026 · 66 anos de história</li>
-                </ul>
-                <p class="x-feat__text">São 66 anos de fé, oração e comunidade. Venha agradecer a Deus conosco!</p>
-                <div class="x-feat__actions">
-                  <a class="x-btn x-btn--dark" href="#aniversario"><svg class="x-i"><use href="#i-arrow" /></svg> Ver destaque</a>
-                  <a class="x-btn x-btn--line" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
-                </div>
-              </div>
-            </article>
             <article class="x-feat" id="noticia-cerco-jerico">
               <figure class="x-feat__img">
                 <img src="cerco_jerico_2026.jpg" alt="Ostensório com o Santíssimo Sacramento iluminado, diante de fiéis com velas" loading="lazy" style="aspect-ratio: 3 / 2; object-fit: cover;" />
@@ -1077,9 +1044,6 @@
                   <li><svg class="x-i"><use href="#i-pin" /></svg> Igreja Matriz – Rua Antônio da Mata Júnior, 80</li>
                 </ul>
                 <p class="x-feat__text">Sete dias de oração e adoração diante do Santíssimo. Traga suas intenções!</p>
-                <div class="x-feat__actions">
-                  <a class="x-btn x-btn--dark" href="#cerco-jerico"><svg class="x-i"><use href="#i-arrow" /></svg> Ver destaque</a>
-                </div>
               </div>
             </article>
             <article class="x-feat" id="noticia-kit-cerco">
@@ -1122,6 +1086,26 @@
               <h2>Momentos recentes da nossa comunidade</h2>
             </div>
             <ul class="x-viv">
+              <li>
+                <article class="x-viv__card" id="noticia-66-anos">
+                  <div class="x-viv__media">
+                    <div class="x-viv__track" tabindex="0" aria-label="Foto histórica da Paróquia São Luiz Gonzaga">
+                      <img src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" loading="lazy" />
+                    </div>
+                    <span class="x-viv__count">1 / 1</span>
+                  </div>
+                  <div class="x-viv__body">
+                    <div class="x-viv__tags"><span class="x-viv__date">Aniversário da Paróquia</span></div>
+                    <h3>66 anos da Paróquia São Luiz Gonzaga</h3>
+                    <p class="x-viv__when"><svg class="x-i"><use href="#i-cal" /></svg> Sexta-feira, 30 de outubro de 2026 · 66 anos de história</p>
+                    <p class="x-viv__text">São 66 anos de fé, oração e comunidade. Venha agradecer a Deus conosco!</p>
+                    <div class="x-viv__links">
+                      <a class="x-btn x-btn--dark x-btn--sm" href="#aniversario"><svg class="x-i"><use href="#i-arrow" /></svg> Ver destaque</a>
+                      <a class="x-btn x-btn--line x-btn--sm" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
+                    </div>
+                  </div>
+                </article>
+              </li>
               <li>
                 <article class="x-viv__card">
                   <div class="x-viv__media">
@@ -2812,7 +2796,7 @@
               <ul>
                 <li><a href="#top">Início</a></li>
                 <li><a href="#horarios">Horários</a></li>
-                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#noticias">Avisos</a></li>
                 <li><a href="#historia">História</a></li>
                 <li><a href="#padres">Padres</a></li>
                 <li><a href="#brasao">Brasão</a></li>
@@ -3265,7 +3249,12 @@
           return s;
         }
 
+        var anniv = document.getElementById("noticia-66-anos");
+        if (anniv && txt(anniv.querySelector("h3"))) {
+          items.push({ id: anniv.id, tag: "Aviso", icon: "i-mega", img: imgOf(anniv), text: txt(anniv.querySelector("h3")), desc: txt(anniv.querySelector(".x-viv__text") || anniv.querySelector(".x-feat__text")) });
+        }
         document.querySelectorAll("section#noticias article.x-feat").forEach(function (a, i) {
+          if (a === anniv) return;
           var t = txt(a.querySelector("h3"));
           if (!t) return;
           if (!a.id) a.id = "aviso-" + (i + 1);
@@ -3274,7 +3263,7 @@
         var n = 0;
         document.querySelectorAll("section#vida-paroquia article.x-viv__card").forEach(function (c) {
           var t = txt(c.querySelector("h3"));
-          if (!t) return;
+          if (!t || c === anniv) return;
           n++;
           if (!c.id) { var k = n; while (document.getElementById("viv-" + k)) k++; c.id = "viv-" + k; }
           if (c.getAttribute("data-destaque") === "nao") return;

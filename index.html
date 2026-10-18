@@ -512,26 +512,10 @@
       @media (min-width: 860px) { .x-int { grid-template-columns: auto 1fr auto; align-items: center; gap: 32px; padding: 36px 40px; } }
 
       /* Galeria */
-      .x-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 0; padding: 0; list-style: none; }
-      @media (min-width: 760px) { .x-photos { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
       .x-photo { display: block; width: 100%; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: zoom-in; }
       .x-photo__img { display: block; overflow: hidden; border-radius: 16px; background: var(--x-cream); box-shadow: var(--x-shadow); }
       .x-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 0.35s; }
       .x-photo:hover img { transform: scale(1.04); }
-      .x-photo__cap { display: block; margin-top: 8px; font-size: 14px; font-weight: 600; line-height: 1.4; }
-      .x-photos-cta { display: flex; justify-content: center; margin-top: 36px; }
-      .x-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 0 0 28px; }
-      .x-tab { min-height: 44px; padding: 10px 20px; border: 2px solid var(--x-ochre); border-radius: 999px; background: transparent; color: var(--x-ochre); font: 600 15px/1.2 var(--x-sans); letter-spacing: 0.02em; cursor: pointer; transition: background 0.2s, color 0.2s; }
-      .x-tab:hover { background: var(--x-cream); }
-      .x-tab[aria-selected="true"] { background: var(--x-ochre); color: #fff; }
-      .x-album[hidden] { display: none; }
-      .x-album__intro { max-width: 720px; margin: 0 auto 24px; font-size: 16px; line-height: 1.6; text-align: center; }
-      .x-photos--portrait { grid-template-columns: repeat(2, 1fr); }
-      @media (min-width: 760px) { .x-photos--portrait { grid-template-columns: repeat(3, 1fr); } }
-      @media (min-width: 1040px) { .x-photos--portrait { grid-template-columns: repeat(4, 1fr); } }
-      .x-photos--portrait .x-photo img { aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; }
-      .x-album__link { display: flex; justify-content: center; margin-top: 24px; }
-      .x-album__link a { display: inline-flex; align-items: center; min-height: 44px; color: var(--x-ochre); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
       .x-lb { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 72px 16px; background: rgba(20, 12, 9, 0.94); }
       .x-lb[hidden] { display: none; }
       .x-lb__slide { display: none; margin: 0; text-align: center; }
@@ -793,7 +777,6 @@
           <a href="#padres">Padres <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#vida">Pastorais e Movimentos <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#doacoes">Doações <svg class="x-i"><use href="#i-arrow" /></svg></a>
-          <a href="#galeria">Galeria <svg class="x-i"><use href="#i-arrow" /></svg></a>
           <a href="#contato">Contato <svg class="x-i"><use href="#i-arrow" /></svg></a>
         </nav>
         <div class="x-drawer__foot">
@@ -1129,21 +1112,6 @@
                 <a class="x-btn x-btn--line x-btn--sm" href="https://www.instagram.com/reel/DeE-u97xzXA/" target="_blank" rel="noopener">Ver no Instagram</a>
               </div>
             </article>
-            <!-- Notícias específicas: adicione um <article class="x-card"> por aviso dentro de .x-grid3#noticias-lista, acima das redes sociais. -->
-            <div class="x-grid3 x-grid3--two" id="noticias-lista">
-              <article class="x-card">
-                <span class="x-ico"><svg class="x-i"><use href="#i-ig" /></svg></span>
-                <h3>Instagram</h3>
-                <p>Avisos e eventos em @psluizgonzaga.</p>
-                <a class="x-btn x-btn--line x-btn--sm" href="https://www.instagram.com/psluizgonzaga/" target="_blank" rel="noopener">@psluizgonzaga</a>
-              </article>
-              <article class="x-card">
-                <span class="x-ico"><svg class="x-i"><use href="#i-fb" /></svg></span>
-                <h3>Facebook</h3>
-                <p>Novidades da comunidade paroquial.</p>
-                <a class="x-btn x-btn--line x-btn--sm" href="https://www.facebook.com/pslgonzaga" target="_blank" rel="noopener">pslgonzaga</a>
-              </article>
-            </div>
           </div>
         </section>
 
@@ -2778,52 +2746,6 @@
           </div>
         </section>
 
-        <section class="x-sec x-sec--white" id="galeria">
-          <div class="x-wrap">
-            <div class="x-head">
-              <span class="x-eyebrow">Fotos</span>
-              <h2>Galeria</h2>
-              <p class="x-head__sub">Momentos da nossa comunidade</p>
-            </div>
-            <div class="x-tabs" role="tablist" aria-label="Álbuns">
-              <button class="x-tab" type="button" role="tab" id="tab-penha" aria-controls="album-penha" aria-selected="true">Festa de N. Sra. da Penha 2026</button>
-              <button class="x-tab" type="button" role="tab" id="tab-igreja" aria-controls="album-igreja" aria-selected="false" tabindex="-1">Nossa Igreja</button>
-            </div>
-            <div class="x-album" id="album-penha" role="tabpanel" aria-labelledby="tab-penha">
-              <p class="x-album__intro">Nossa comunidade se reuniu na Capela Nossa Senhora da Penha para celebrar sua festa, com Santa Missa, procissão pelas ruas do bairro e a Missa da Esperança. Nossa Senhora da Penha, rogai por nós!</p>
-              <ul class="x-photos x-photos--portrait">
-                <li><button class="x-photo" type="button" data-album="penha" data-i="0" aria-label="Ampliar foto: Imagem de N. Sra. da Penha com flores"><span class="x-photo__img"><img src="penha2026_01.jpg" alt="Imagem de N. Sra. da Penha com flores" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="1" aria-label="Ampliar foto: Comunidade reunida na capela"><span class="x-photo__img"><img src="penha2026_02.jpg" alt="Comunidade reunida na capela" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="2" aria-label="Ampliar foto: Comunidade reunida na capela"><span class="x-photo__img"><img src="penha2026_03.jpg" alt="Comunidade reunida na capela" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="3" aria-label="Ampliar foto: Procissão pelas ruas"><span class="x-photo__img"><img src="penha2026_04.jpg" alt="Procissão pelas ruas" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="4" aria-label="Ampliar foto: Fiel com flor em oração"><span class="x-photo__img"><img src="penha2026_05.jpg" alt="Fiel com flor em oração" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="5" aria-label="Ampliar foto: Padre com coroa da imagem"><span class="x-photo__img"><img src="penha2026_06.jpg" alt="Padre com coroa da imagem" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="6" aria-label="Ampliar foto: Santa Missa no altar"><span class="x-photo__img"><img src="penha2026_07.jpg" alt="Santa Missa no altar" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="7" aria-label="Ampliar foto: Santa Missa no altar"><span class="x-photo__img"><img src="penha2026_08.jpg" alt="Santa Missa no altar" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="8" aria-label="Ampliar foto: Consagração"><span class="x-photo__img"><img src="penha2026_09.jpg" alt="Consagração" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="9" aria-label="Ampliar foto: Missa da Esperança, comunidade"><span class="x-photo__img"><img src="penha2026_10.jpg" alt="Missa da Esperança, comunidade" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="10" aria-label="Ampliar foto: Imagem de N. Sra. da Penha no andor"><span class="x-photo__img"><img src="penha2026_11.jpg" alt="Imagem de N. Sra. da Penha no andor" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="11" aria-label="Ampliar foto: Coroinhas e comunidade na rua"><span class="x-photo__img"><img src="penha2026_12.jpg" alt="Coroinhas e comunidade na rua" loading="lazy" /></span></button></li>
-                <li><button class="x-photo" type="button" data-album="penha" data-i="12" aria-label="Ampliar foto: Coroinhas em frente à capela"><span class="x-photo__img"><img src="penha2026_13.jpg" alt="Coroinhas em frente à capela" loading="lazy" /></span></button></li>
-              </ul>
-              <p class="x-album__link"><a href="https://www.instagram.com/p/DdAdCDAnE6o/" target="_blank" rel="noopener">Ver a publicação no Instagram</a></p>
-            </div>
-            <div class="x-album" id="album-igreja" role="tabpanel" aria-labelledby="tab-igreja" hidden>
-            <ul class="x-photos">
-              <li><button class="x-photo" type="button" data-i="0" aria-label="Ampliar foto: Igreja Matriz"><span class="x-photo__img"><img src="fachada.png" alt="Fachada da Igreja Matriz São Luiz Gonzaga" loading="lazy" /></span><span class="x-photo__cap">Igreja Matriz</span></button></li>
-              <li><button class="x-photo" type="button" data-i="1" aria-label="Ampliar foto: Nossa igreja em festa"><span class="x-photo__img"><img src="h_interior.jpg" alt="Interior da igreja decorado" loading="lazy" /></span><span class="x-photo__cap">Nossa igreja em festa</span></button></li>
-              <li><button class="x-photo" type="button" data-i="2" aria-label="Ampliar foto: Painel do Cristo"><span class="x-photo__img"><img src="h_painel_cristo.jpg" alt="Painel do Cristo no Trono Divino com os apóstolos" loading="lazy" /></span><span class="x-photo__cap">Painel do Cristo</span></button></li>
-              <li><button class="x-photo" type="button" data-i="3" aria-label="Ampliar foto: Via-Sacra"><span class="x-photo__img"><img src="h_viasacra.jpg" alt="Quadro da Via-Sacra" loading="lazy" /></span><span class="x-photo__cap">Via-Sacra</span></button></li>
-              <li><button class="x-photo" type="button" data-i="4" aria-label="Ampliar foto: A antiga capela"><span class="x-photo__img"><img src="h_capela_antiga.jpg" alt="Antiga Capela São Luiz Gonzaga" loading="lazy" /></span><span class="x-photo__cap">A antiga capela</span></button></li>
-              <li><button class="x-photo" type="button" data-i="5" aria-label="Ampliar foto: Construção, 1980"><span class="x-photo__img"><img src="h_construcao_1980.jpg" alt="A igreja em construção em 1980" loading="lazy" /></span><span class="x-photo__cap">Construção, 1980</span></button></li>
-            </ul>
-            </div>
-            <div class="x-photos-cta">
-              <a class="x-btn x-btn--line" href="https://www.instagram.com/psluizgonzaga/" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-ig" /></svg> Veja mais fotos no Instagram</a>
-            </div>
-          </div>
-        </section>
-
         <section class="x-sec x-sec--cream" id="contato">
           <div class="x-wrap">
             <div class="x-head">
@@ -2920,19 +2842,6 @@
       <p class="x-lb__count" aria-live="polite"></p>
       <figure class="x-lb__slide" data-album="aparecida"><img src="aparecida1.jpg" alt="Festa de Nossa Senhora Aparecida na paróquia" loading="lazy" /><figcaption>Festa de Nossa Senhora Aparecida, 12/10/2026</figcaption></figure>
       <figure class="x-lb__slide" data-album="aparecida"><img src="aparecida2.jpg" alt="Santa Missa da Festa de Nossa Senhora Aparecida presidida pelo Padre William Lima" loading="lazy" /><figcaption>Santa Missa presidida pelo Padre William Lima</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_01.jpg" alt="Imagem de N. Sra. da Penha com flores" loading="lazy" /><figcaption>Imagem de N. Sra. da Penha com flores</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_02.jpg" alt="Comunidade reunida na capela" loading="lazy" /><figcaption>Comunidade reunida na capela</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_03.jpg" alt="Comunidade reunida na capela" loading="lazy" /><figcaption>Comunidade reunida na capela</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_04.jpg" alt="Procissão pelas ruas" loading="lazy" /><figcaption>Procissão pelas ruas</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_05.jpg" alt="Fiel com flor em oração" loading="lazy" /><figcaption>Fiel com flor em oração</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_06.jpg" alt="Padre com coroa da imagem" loading="lazy" /><figcaption>Padre com coroa da imagem</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_07.jpg" alt="Santa Missa no altar" loading="lazy" /><figcaption>Santa Missa no altar</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_08.jpg" alt="Santa Missa no altar" loading="lazy" /><figcaption>Santa Missa no altar</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_09.jpg" alt="Consagração" loading="lazy" /><figcaption>Consagração</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_10.jpg" alt="Missa da Esperança, comunidade" loading="lazy" /><figcaption>Missa da Esperança, comunidade</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_11.jpg" alt="Imagem de N. Sra. da Penha no andor" loading="lazy" /><figcaption>Imagem de N. Sra. da Penha no andor</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_12.jpg" alt="Coroinhas e comunidade na rua" loading="lazy" /><figcaption>Coroinhas e comunidade na rua</figcaption></figure>
-      <figure class="x-lb__slide" data-album="penha"><img src="penha2026_13.jpg" alt="Coroinhas em frente à capela" loading="lazy" /><figcaption>Coroinhas em frente à capela</figcaption></figure>
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_2.jpg" alt="Consagração do Altar em 2007: procissão de entrada pelo corredor, com a igreja cheia" loading="lazy" /><figcaption>Consagração do Altar, 2007: procissão de entrada</figcaption></figure>
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_3.jpg" alt="Consagração do Altar em 2007: fiéis e coroinha com imagem na procissão" loading="lazy" /><figcaption>Consagração do Altar, 2007: fiéis e coroinha na procissão</figcaption></figure>
       <figure class="x-lb__slide" data-album="altar2007"><img src="altar_2007_4.jpg" alt="Consagração do Altar em 2007: Dom Emílio Pignoli, de mitra e báculo, falando no ambo" loading="lazy" /><figcaption>Consagração do Altar, 2007: Dom Emílio no ambo</figcaption></figure>
@@ -3046,12 +2955,6 @@
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_2.jpg" alt="Bispo e padres celebrando no palco coberto por uma tenda azul, na criação da paróquia em 29/10/2006" loading="lazy" /><figcaption>A celebração sob a tenda, 29/10/2006</figcaption></figure>
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_3.jpg" alt="Bispo de mitra caminhando entre os fiéis na criação da Paróquia Santa Rosa de Lima, em 29/10/2006" loading="lazy" /><figcaption>O bispo entre os fiéis, 29/10/2006</figcaption></figure>
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_4.jpg" alt="Dois padres de alva entre os fiéis na criação da Paróquia Santa Rosa de Lima, em 29/10/2006" loading="lazy" /><figcaption>Padres com a comunidade, 29/10/2006</figcaption></figure>
-      <figure class="x-lb__slide"><img src="fachada.png" alt="Fachada da Igreja Matriz São Luiz Gonzaga" loading="lazy" /><figcaption>Igreja Matriz</figcaption></figure>
-      <figure class="x-lb__slide"><img src="h_interior.jpg" alt="Interior da igreja decorado" loading="lazy" /><figcaption>Nossa igreja em festa</figcaption></figure>
-      <figure class="x-lb__slide"><img src="h_painel_cristo.jpg" alt="Painel do Cristo no Trono Divino com os apóstolos" loading="lazy" /><figcaption>Painel do Cristo</figcaption></figure>
-      <figure class="x-lb__slide"><img src="h_viasacra.jpg" alt="Quadro da Via-Sacra" loading="lazy" /><figcaption>Via-Sacra</figcaption></figure>
-      <figure class="x-lb__slide"><img src="h_capela_antiga.jpg" alt="Antiga Capela São Luiz Gonzaga" loading="lazy" /><figcaption>A antiga capela</figcaption></figure>
-      <figure class="x-lb__slide"><img src="h_construcao_1980.jpg" alt="A igreja em construção em 1980" loading="lazy" /><figcaption>Construção, 1980</figcaption></figure>
       <button class="x-lb__btn x-lb__close" type="button" aria-label="Fechar"><svg class="x-i"><use href="#i-close" /></svg></button>
       <button class="x-lb__btn x-lb__prev" type="button" aria-label="Foto anterior"><svg class="x-i"><use href="#i-arrow" /></svg></button>
       <button class="x-lb__btn x-lb__next" type="button" aria-label="Próxima foto"><svg class="x-i"><use href="#i-arrow" /></svg></button>
@@ -3076,7 +2979,7 @@
         window.addEventListener("resize", function () { if (window.innerWidth >= 1100) setOpen(false); });
 
         var links = [].slice.call(document.querySelectorAll(".x-menu a"));
-        var map = { top: "top", padroeiro: "padroeiro", horarios: "horarios", noticias: "noticias", "vida-paroquia": "vida-paroquia", liturgia: "liturgia", historia: "historia", vida: "vida", doacoes: "doacoes", galeria: "galeria", contato: "contato" };
+        var map = { top: "top", padroeiro: "padroeiro", horarios: "horarios", noticias: "noticias", "vida-paroquia": "vida-paroquia", liturgia: "liturgia", historia: "historia", vida: "vida", doacoes: "doacoes", contato: "contato" };
         var secs = Object.keys(map).map(function (id) { return document.getElementById(id === "top" ? "boas-vindas" : id); });
         function onScroll() {
           var y = window.scrollY + 140, cur = "top";
@@ -3099,25 +3002,6 @@
           allSlides.forEach(function (s) { if (albumOf(s) !== a) s.classList.remove("is-on"); });
           slides = allSlides.filter(function (s) { return albumOf(s) === a; });
         }
-        var tabs = [].slice.call(document.querySelectorAll(".x-tab"));
-        function selectTab(t, focus) {
-          tabs.forEach(function (o) {
-            var on = o === t;
-            o.setAttribute("aria-selected", on ? "true" : "false");
-            o.tabIndex = on ? 0 : -1;
-            document.getElementById(o.getAttribute("aria-controls")).hidden = !on;
-          });
-          if (focus) t.focus();
-        }
-        tabs.forEach(function (t, k) {
-          t.addEventListener("click", function () { selectTab(t); });
-          t.addEventListener("keydown", function (e) {
-            if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
-              e.preventDefault();
-              selectTab(tabs[(k + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length], true);
-            }
-          });
-        });
         function show(i) {
           cur = (i + slides.length) % slides.length;
           slides.forEach(function (s, k) { s.classList.toggle("is-on", k === cur); });

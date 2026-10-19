@@ -280,6 +280,17 @@
       .x-anniv__seal .x-anniv__photo img { display: block; box-sizing: border-box; width: 100%; height: auto; padding: 0; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; border: 3px solid var(--x-gold); border-radius: 16px; background: var(--x-cream); }
       .x-anniv__photo figcaption { margin-top: 10px; font-size: 13px; line-height: 1.45; color: var(--x-cream); text-align: center; }
       .x-feat__img.x-feat__photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center; }
+      .x-feat__img .x-photo__img { border-radius: 16px; box-shadow: none; }
+      .x-feat__img .x-photo img { aspect-ratio: auto; height: auto; object-fit: contain; }
+      .x-feat__img .x-photo:hover img { transform: none; }
+      .x-feat__verse { margin: 0; padding-left: 14px; border-left: 3px solid var(--x-gold); font: italic 600 17px/1.5 var(--x-serif); color: var(--x-brown); }
+      .x-feat__verse cite { font: 600 14px/1.5 var(--x-sans); font-style: normal; color: var(--x-ochre); }
+      .x-feat__prog { width: 100%; }
+      .x-feat__prog h4 { margin: 0 0 6px; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--x-ochre); }
+      .x-feat__prog ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--x-line); }
+      .x-feat__prog li { display: grid; grid-template-columns: 5.5em 3.5em 1fr; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--x-line); font-size: 14px; line-height: 1.4; }
+      .x-feat__prog li b { font-weight: 700; }
+      .x-feat__prog li span { color: var(--x-muted); }
 
       /* Church news (Diocese + CNBB) */
       .x-sec--paper { background: var(--x-cream-2); border-top: 1px solid var(--x-line); }
@@ -739,6 +750,12 @@
         .x-hero__bottom { flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 12px; }
         .x-hero__bottom .x-btn { font-size: 16px; }
       }
+      /* Vertical reel cover: shown whole, no crop */
+      .x-feat__img.x-feat__reel { background: var(--x-cream); }
+      .x-feat__reel a { display: block; max-width: 300px; margin: 0 auto; }
+      .x-feat__reel img { aspect-ratio: 9 / 16; height: auto; object-fit: contain; }
+      .x-feat__note { margin: 0; font-size: 14px; color: var(--x-muted); }
+      /* Compact highlight strip */
     </style>
   </head>
   <body class="x-body">
@@ -1087,7 +1104,7 @@
             </div>
             <article class="x-feat" id="noticia-cerco-jerico">
               <figure class="x-feat__img">
-                <img src="cerco_jerico_2026.jpg" alt="Ostensório com o Santíssimo Sacramento iluminado, diante de fiéis com velas" loading="lazy" style="aspect-ratio: 3 / 2; object-fit: cover;" />
+                <button class="x-photo" type="button" data-album="cercojerico" data-i="0" aria-label="Ampliar cartazes do Cerco de Jericó"><span class="x-photo__img"><img src="cerco_jerico_capa.jpg" alt="Cartaz do Cerco de Jericó: ostensório com o Santíssimo, de 24 a 30 de outubro" loading="lazy" /></span></button>
               </figure>
               <div class="x-feat__body">
                 <span class="x-feat__tag">Em breve</span>
@@ -1097,7 +1114,20 @@
                   <li><svg class="x-i"><use href="#i-clock" /></svg> Todos os dias às 19h30 · domingo, 25/10, às 18h00</li>
                   <li><svg class="x-i"><use href="#i-pin" /></svg> Igreja Matriz – Rua Antônio da Mata Júnior, 80</li>
                 </ul>
+                <p class="x-feat__verse">“O Senhor é minha força e meu escudo.” <cite>(Sl 28,7)</cite></p>
                 <p class="x-feat__text">Sete dias de oração e adoração diante do Santíssimo. Traga suas intenções!</p>
+                <div class="x-feat__prog">
+                  <h4>Programação</h4>
+                  <ul>
+                    <li><b>Sáb 24/10</b><span>19h30</span>Pe. Leandro Riquelmi</li>
+                    <li><b>Dom 25/10</b><span>18h00</span>Pe. Anderson Guerra</li>
+                    <li><b>Seg 26/10</b><span>19h30</span>Pe. Serginho</li>
+                    <li><b>Ter 27/10</b><span>19h30</span>Pe. Miguel, SJS</li>
+                    <li><b>Qua 28/10</b><span>19h30</span>Pe. Wallace Adorno</li>
+                    <li><b>Qui 29/10</b><span>19h30</span>Pe. Rodolfo Marinho</li>
+                    <li><b>Sex 30/10</b><span>19h30</span>Pe. Luciano e Pe. Orlando (encerramento)</li>
+                  </ul>
+                </div>
               </div>
             </article>
             <article class="x-feat" id="noticia-kit-cerco">
@@ -1112,6 +1142,22 @@
                   <li><svg class="x-i"><use href="#i-cal" /></svg> Valor: R$ 18,00</li>
                 </ul>
                 <p class="x-feat__text">Adquira com os membros das pastorais antes ou após as Santas Missas.</p>
+              </div>
+            </article>
+            <article class="x-feat" id="noticia-ejc-2027">
+              <figure class="x-feat__img x-feat__reel">
+                <a href="https://www.instagram.com/reel/Derop09xEmO/" target="_blank" rel="noopener" aria-label="Ver o vídeo do 2º EJC no Instagram"><img src="ejc2027_capa.jpg" alt="Capa do vídeo do 2º EJC da Paróquia São Luiz Gonzaga" loading="lazy" /></a>
+              </figure>
+              <div class="x-feat__body">
+                <span class="x-feat__tag">Inscrições abertas</span>
+                <h3>2º EJC da Paróquia São Luiz Gonzaga</h3>
+                <ul class="x-feat__meta">
+                  <li><svg class="x-i"><use href="#i-cal" /></svg> 10 e 11 de abril de 2027</li>
+                  <li><svg class="x-i"><use href="#i-pin" /></svg> Colégio Antônio Manoel</li>
+                </ul>
+                <p class="x-feat__text">Para participar: ter entre 15 e 40 anos; nunca ter participado de um EJC; não ser casado(a); ter disponibilidade para os dois dias; preencher o formulário de participante.</p>
+                <a class="x-btn x-btn--line x-btn--sm" href="https://www.instagram.com/reel/Derop09xEmO/" target="_blank" rel="noopener">Ver o vídeo e se inscrever</a>
+                <p class="x-feat__note">Inscrição pelo link na bio do <a class="x-link" href="https://www.instagram.com/ejcsaoluizgonzaga/" target="_blank" rel="noopener">@ejcsaoluizgonzaga</a></p>
               </div>
             </article>
             <article class="x-feat" id="noticia-churrasquinho-ejc">
@@ -1406,6 +1452,10 @@
                 <ul class="x-nlist">
                   <li>
                     <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Artigo</span> <time datetime="2026-10-19">19/10/2026</time></span>
+                    <a href="https://www.cnbb.org.br/desafios-do-presente/" target="_blank" rel="noopener">Desafios do presente!</a>
+                  </li>
+                  <li>
+                    <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Artigo</span> <time datetime="2026-10-19">19/10/2026</time></span>
                     <a href="https://www.cnbb.org.br/sentir-a-vida/" target="_blank" rel="noopener">Sentir a vida</a>
                   </li>
                   <li>
@@ -1415,10 +1465,6 @@
                   <li>
                     <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Artigo</span> <time datetime="2026-10-19">19/10/2026</time></span>
                     <a href="https://www.cnbb.org.br/a-graca-do-partilhar/" target="_blank" rel="noopener">A graça do partilhar</a>
-                  </li>
-                  <li>
-                    <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Artigo</span> <time datetime="2026-10-19">19/10/2026</time></span>
-                    <a href="https://www.cnbb.org.br/a-efemeridade-dos-imperios-deste-mundo-e-a-permanencia-de-cristo-ressuscitado-vamos-adora-lo/" target="_blank" rel="noopener">A efemeridade dos impérios deste mundo e a permanência de Cristo Ressuscitado! Vamos adorá-Lo!</a>
                   </li>
                 </ul>
                 <div class="x-src__foot">
@@ -1435,12 +1481,12 @@
                 </div>
                 <ul class="x-nlist">
                   <li>
-                    <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Papa</span> <time datetime="2026-10-19">19/10/2026</time></span>
-                    <a href="https://www.vaticannews.va/pt/papa/news/2026-10/papa-leao-xiv-nomeaco-comissao-teologica-internacional-pucrs-bra.html" target="_blank" rel="noopener">Papa: Comissão Teológica tem novos membros nomeados, inclusive um brasileiro</a>
-                  </li>
-                  <li>
                     <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Brasil</span> <time datetime="2026-10-19">19/10/2026</time></span>
                     <a href="https://www.vaticannews.va/pt/igreja/news/2026-10/cirio-maraba-entrou-historia-450-mil-participantes.html" target="_blank" rel="noopener">O 46º Círio de Marabá entrou para a história: mais de 450 mil participantes</a>
+                  </li>
+                  <li>
+                    <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Papa</span> <time datetime="2026-10-19">19/10/2026</time></span>
+                    <a href="https://www.vaticannews.va/pt/papa/news/2026-10/papa-leao-xiv-nomeaco-comissao-teologica-internacional-pucrs-bra.html" target="_blank" rel="noopener">Papa: Comissão Teológica tem novos membros nomeados, inclusive um brasileiro</a>
                   </li>
                   <li>
                     <span class="x-nlist__meta"><span class="x-tag x-tag--matriz">Papa</span> <time datetime="2026-10-19">19/10/2026</time></span>
@@ -1670,9 +1716,28 @@
                   <h4 class="x-tl__sub">A primeira comissão da nova igreja</h4>
                   <p>Seu Hettore, “o incansável”, que estava na obra todo santo dia; seu Antônio Pereira da Cruz, da Rua 24; Geraldo “MWM” e seu João “Caiçara”, da Rua 21; dona Neide, Ivone, dona Evangelina e Elcio; Agamenon e Estanislau, da Vila das Belezas, que carregavam as caixas de bebida; os pedreiros Germano e seu Ari, o servente Raimundo e o Gentil.</p>
                   <p>Um construtor chegou a processar a paróquia cobrando mais do que o combinado. A paróquia ganhou porque a metragem e o valor estavam registrados em ata.</p>
-                  <h4 class="x-tl__sub">Cadeiras de cinema da TV Gazeta</h4>
-                  <p>Os primeiros assentos da matriz nova foram cadeiras de cinema doadas pela TV Gazeta, por indicação do Tadeu Garcia. Os caminhoneiros Marrochio e Fifita buscaram tudo na Fundação Cásper Líbero, na Avenida Paulista, numa noite de chuva e frio. Teve gente que veio em cima da carga pela Marginal, e as cadeiras foram descarregadas na mesma madrugada.</p>
                   <p>O Acervo Fatorelli registra as etapas da obra: a quadra demolida em abril de 1985, a edificação nova em maio de 1986, a treliça do telhado, a demolição do antigo presbitério e a terraplenagem em 1988, e a laje principal e a estrutura do forro em 1990.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-gal">
+                  <figure class="x-gal__wide">
+                    <button class="x-photo" type="button" data-album="gazeta" data-i="0" aria-label="Ampliar foto: Cadeiras de cinema da TV Gazeta na nave da matriz"><span class="x-photo__img"><img src="gazeta01.jpg" alt="Vista do alto da nave com fileiras de cadeiras de cinema e passarela vermelha" loading="lazy" /></span></button>
+                    <figcaption>Cadeiras de cinema da TV Gazeta na nave da matriz · Acervo Fatorelli</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="x-photo" type="button" data-album="gazeta" data-i="1" aria-label="Ampliar foto: Entrada principal, com as cadeiras de cinema ao fundo"><span class="x-photo__img"><img src="gazeta02.jpg" alt="Arco de flores e passarela vermelha na entrada da igreja, cadeiras de cinema dos dois lados" loading="lazy" /></span></button>
+                    <figcaption>Entrada principal, com as cadeiras de cinema ao fundo · Acervo Fatorelli</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="x-photo" type="button" data-album="gazeta" data-i="2" aria-label="Ampliar foto: A nave com as cadeiras de cinema"><span class="x-photo__img"><img src="gazeta03.jpg" alt="Nave da igreja decorada com flores, com as cadeiras de cinema enfileiradas" loading="lazy" /></span></button>
+                    <figcaption>A nave com as cadeiras de cinema · Acervo Fatorelli</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Anos 1980</span>
+                  <h3>Cadeiras de cinema da TV Gazeta</h3>
+                  <p>Os primeiros assentos da matriz nova foram cadeiras de cinema doadas pela TV Gazeta, por indicação do Tadeu Garcia. Os caminhoneiros Marrochio e Fifita buscaram tudo na Fundação Cásper Líbero, na Avenida Paulista, numa noite de chuva e frio. Teve gente que veio em cima da carga pela Marginal, e as cadeiras foram descarregadas na mesma madrugada.</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -1721,7 +1786,6 @@
                   <span class="x-tl__date">2000</span>
                   <h3>Os primeiros Ministros da Comunhão</h3>
                   <p>A paróquia formou seu primeiro grupo de Ministros Extraordinários da Sagrada Comunhão, instituídos na Catedral Sagrada Família pelo primeiro bispo da Diocese de Campo Limpo, Dom Emílio Pignoli.</p>
-                  <p>“A velha-guarda teve que estudar um pouquinho!”</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -1730,6 +1794,18 @@
                   <span class="x-tl__date">2000 a 2011</span>
                   <h3>Pe. Décio Fogagnolli Júnior, vigário paroquial</h3>
                   <p>De 2000 a 2011, o Pe. Décio Fogagnolli Júnior foi vigário da paróquia.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-tl__media--year" aria-hidden="true">2004</div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">2004</span>
+                  <h3>Os bancos novos da matriz</h3>
+                  <ul class="x-tags">
+                    <li><b>125</b> bancos</li>
+                  </ul>
+                  <p>Depois de muitos anos com as cadeiras de cinema da TV Gazeta, o Pe. Edmundo realizou o desejo de ter “belas portas e bancos de qualidade”. Contratou a Macampe, e 125 famílias assumiram o custo dos bancos por meio de um livro de ouro. Em 2004, a igreja abriu as portas novas com os bancos novos, os mesmos 125 bancos que a matriz tem até hoje.</p>
+                  <p class="fineprint">Fonte: textos de Carlos Fatorelli.</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -1746,20 +1822,15 @@
                     <img src="h_painel_cristo.jpg" alt="Painel frontal: Jesus no Trono Divino com apóstolos, em Pentecoste" />
                     <figcaption>Painel frontal</figcaption>
                   </figure>
-                  <figure>
-                    <img src="h_viasacra.jpg" alt="Quadro da Via-Sacra pintado por Padre Lázaro" />
-                    <figcaption>Quadro da Via-Sacra</figcaption>
-                  </figure>
                 </div>
                 <div class="x-tl__card">
                   <span class="x-tl__date">2004</span>
                   <h3>A arte sacra de Padre Lázaro</h3>
                   <ul class="x-tags">
                     <li><b>~6 m</b> painéis a óleo</li>
-                    <li><b>14</b> quadros da Via-Sacra</li>
                   </ul>
                   <p>Com a construção quase concluída, o Pe. Edmundo convidou o Padre Lázaro Aparecido Diogo, capuchinho nascido em Andradas (MG), pintor e músico, que conheceu no Colégio Jesus, Maria, José, em Santo Amaro. Em 2004, ele pintou a óleo painéis de cerca de 6 metros de altura, com a ajuda do piauiense Bento Alves.</p>
-                  <p>Ao fundo, Pentecostes, com Cristo no Trono Divino e os apóstolos; à esquerda de quem entra, a Anunciação à Virgem Maria; à direita, o anjo da Ressurreição; na capela do Santíssimo, a Transfiguração; e, na sacristia, Maria com o Menino. Depois, Padre Lázaro pintou também as 14 estações da Via-Sacra nas paredes laterais.</p>
+                  <p>Ao fundo, Pentecostes, com Cristo no Trono Divino e os apóstolos; à esquerda de quem entra, a Anunciação à Virgem Maria; à direita, o anjo da Ressurreição; na capela do Santíssimo, a Transfiguração; e, na sacristia, Maria com o Menino.</p>
                   <p>A paróquia guarda hoje um acervo representativo do Patrimônio Sacro paulistano.</p>
                 </div>
               </li>
@@ -1838,6 +1909,20 @@
                 </div>
               </li>
               <li class="x-tl__item">
+                <figure class="x-tl__media">
+                  <img src="h_viasacra.jpg" alt="Quadro da Via-Sacra pintado por Padre Lázaro, 2008" loading="lazy" />
+                  <figcaption>Quadro da Via-Sacra, 2008</figcaption>
+                </figure>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">2008</span>
+                  <h3>A Via-Sacra de Padre Lázaro</h3>
+                  <ul class="x-tags">
+                    <li><b>14</b> estações</li>
+                  </ul>
+                  <p>Em 2008, Padre Lázaro Aparecido Diogo voltou à matriz para pintar as 14 estações da Via-Sacra nas paredes laterais da igreja, completando o conjunto de arte sacra iniciado em 2004.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
                 <div class="x-tl__media x-tl__media--year" aria-hidden="true">2008</div>
                 <div class="x-tl__card">
                   <span class="x-tl__date">08/06/2008</span>
@@ -1876,6 +1961,24 @@
                   <span class="x-tl__date">8 de dezembro de 2013</span>
                   <h3>Jubileu de Ouro Sacerdotal do Pe. Edmundo</h3>
                   <p>Em 8 de dezembro de 2013, a Paróquia São Luiz Gonzaga celebrou o Jubileu de Ouro Sacerdotal do Padre Edmundo da Mata, em comemoração aos seus 50 anos de sacerdócio. A celebração contou com a presença do bispo emérito da Diocese de Campo Limpo, Dom Emílio Pignoli, e de diversos membros do clero diocesano, marcando um momento especial de fé, gratidão e reconhecimento por sua dedicação à Igreja e à comunidade paroquial.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media x-gal x-gal--vert">
+                  <figure>
+                    <button class="x-photo" type="button" data-album="estofado2014" data-i="0" aria-label="Ampliar foto: o primeiro banco com estofado e encosto novos"><span class="x-photo__img"><img src="estofado_2014_1.jpg" alt="Banco de madeira escura com assento e encosto estofados em vermelho, diante do presbitério" loading="lazy" /></span></button>
+                    <figcaption>O primeiro banco com estofado e encosto novos, 2014</figcaption>
+                  </figure>
+                  <figure>
+                    <button class="x-photo" type="button" data-album="estofado2014" data-i="1" aria-label="Ampliar foto: a estreia do novo banco"><span class="x-photo__img"><img src="estofado_2014_2.jpg" alt="Cinco paroquianos no presbitério, duas mulheres sentadas no novo banco estofado vermelho" loading="lazy" /></span></button>
+                    <figcaption>A estreia do novo banco, junho de 2014</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">2014</span>
+                  <h3>Estofados e encostos novos nos bancos</h3>
+                  <p>Em 2014, os bancos da matriz receberam estofado e encosto novos, em vermelho. Em 1º de junho de 2014, o paroquiano João Paulo Barbosa mostrou o primeiro banco pronto: “Esse é o primeiro dos bancos da paróquia com um encosto novo. Em breve, todos os bancos ficarão assim.”</p>
+                  <p class="fineprint">Fotos: João Paulo Barbosa (grupo PSLG no Facebook)</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -2198,6 +2301,20 @@
                   <span class="x-tl__date">Janeiro de 2025</span>
                   <h3>Reforma da fachada</h3>
                   <p>Em janeiro de 2025, a fachada da igreja passou por reforma, em decorrência da queda das pastilhas.</p>
+                </div>
+              </li>
+              <li class="x-tl__item">
+                <div class="x-tl__media">
+                  <figure class="x-whole">
+                    <button class="x-photo" type="button" data-album="higienizacao2025" data-i="0" aria-label="Ampliar foto: a nave com os bancos estofados, março de 2025"><span class="x-photo__img"><img src="higienizacao_2025.jpg" alt="Nave da igreja vista do altar, com fileiras de bancos estofados vermelhos e o coro ao fundo" loading="lazy" /></span></button>
+                    <figcaption>A nave com os bancos estofados, março de 2025</figcaption>
+                  </figure>
+                </div>
+                <div class="x-tl__card">
+                  <span class="x-tl__date">Março de 2025</span>
+                  <h3>Higienização dos estofados</h3>
+                  <p>Em 24 de março de 2025, os estofados dos bancos passaram por uma higienização especializada, para eliminar sujeira, bactérias e o excesso de cera de velas acumulado ao longo dos anos.</p>
+                  <p class="fineprint">Foto: Facebook da paróquia</p>
                 </div>
               </li>
               <li class="x-tl__item">
@@ -2957,6 +3074,9 @@
       <figure class="x-lb__slide" data-album="obra"><img src="obra_nova_igreja_26.jpg" alt="Construção da nova igreja, década de 1980: fachada antiga em demolição" loading="lazy" /><figcaption>Década de 1980 · fachada antiga em demolição · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="obra"><img src="obra_nova_igreja_27.jpg" alt="Construção da nova igreja, década de 1980: estrutura metálica do telhado" loading="lazy" /><figcaption>Década de 1980 · estrutura metálica do telhado · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="obra"><img src="obra_nova_igreja_28.jpg" alt="Construção da nova igreja, década de 1980: treliças e vista do bairro" loading="lazy" /><figcaption>Década de 1980 · treliças e vista do bairro · Acervo Fatorelli</figcaption></figure>
+      <figure class="x-lb__slide" data-album="estofado2014"><img src="estofado_2014_1.jpg" alt="Banco de madeira escura com assento e encosto estofados em vermelho, diante do presbitério" loading="lazy" /><figcaption>O primeiro banco com estofado e encosto novos, 2014 · Foto: João Paulo Barbosa</figcaption></figure>
+      <figure class="x-lb__slide" data-album="estofado2014"><img src="estofado_2014_2.jpg" alt="Cinco paroquianos no presbitério, duas mulheres sentadas no novo banco estofado vermelho" loading="lazy" /><figcaption>A estreia do novo banco, junho de 2014 · Foto: João Paulo Barbosa</figcaption></figure>
+      <figure class="x-lb__slide" data-album="higienizacao2025"><img src="higienizacao_2025.jpg" alt="Nave da igreja vista do altar, com fileiras de bancos estofados vermelhos e o coro ao fundo" loading="lazy" /><figcaption>A nave com os bancos estofados, março de 2025 · Foto: Facebook da paróquia</figcaption></figure>
       <figure class="x-lb__slide" data-album="fachada2006"><img src="fachada_2006.jpg" alt="Montagem sobre a fachada em mosaico da igreja, 2006" loading="lazy" /><figcaption>A fachada em mosaico, 2006 · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="jubileu2015"><img src="jubileu_2015_2.jpg" alt="Jubileu de Ouro Sacerdotal de 2013: Pe. Edmundo no altar, com Dom Emílio ao fundo" loading="lazy" /><figcaption>Jubileu de Ouro Sacerdotal, 2013: Pe. Edmundo no altar</figcaption></figure>
       <figure class="x-lb__slide" data-album="jubileu2015"><img src="jubileu_2015_3.jpg" alt="Jubileu de Ouro Sacerdotal de 2013: faixa 'Ego quos amo arguo et educo' diante do altar" loading="lazy" /><figcaption>Jubileu de Ouro Sacerdotal, 2013: faixa diante do altar</figcaption></figure>
@@ -3014,6 +3134,9 @@
       <figure class="x-lb__slide" data-album="edmundo"><img src="acervo_escadaria_1960s.jpg" alt="Pe. Edmundo da Mata e Chico Furukawa na construção da escadaria, década de 1960" loading="lazy" /><figcaption>Pe. Edmundo e Chico Furukawa na construção da escadaria, década de 1960 · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="edmundo"><img src="acervo_feira_1960s.jpg" alt="Feira na Praça Manuel Ferreira Simões com a igreja no alto, década de 1960" loading="lazy" /><figcaption>Feira na Praça Manuel Ferreira Simões (Abrigo), década de 1960 · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="edmundo"><img src="sagrado_coracao_anos60.jpg" alt="Senhoras do Sagrado Coração com o Pe. Edmundo da Mata, fim da década de 1960" loading="lazy" /><figcaption>Senhoras do Sagrado Coração com o Pe. Edmundo da Mata, fim da década de 1960 · Acervo Fatorelli</figcaption></figure>
+      <figure class="x-lb__slide" data-album="gazeta"><img src="gazeta01.jpg" alt="Vista do alto da nave com fileiras de cadeiras de cinema e passarela vermelha" loading="lazy" /><figcaption>Cadeiras de cinema da TV Gazeta na nave da matriz · Acervo Fatorelli</figcaption></figure>
+      <figure class="x-lb__slide" data-album="gazeta"><img src="gazeta02.jpg" alt="Arco de flores e passarela vermelha na entrada da igreja, cadeiras de cinema dos dois lados" loading="lazy" /><figcaption>Entrada principal, com as cadeiras de cinema ao fundo · Acervo Fatorelli</figcaption></figure>
+      <figure class="x-lb__slide" data-album="gazeta"><img src="gazeta03.jpg" alt="Nave da igreja decorada com flores, com as cadeiras de cinema enfileiradas" loading="lazy" /><figcaption>A nave com as cadeiras de cinema · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="ministros2000"><img src="ministros_2000_1.jpg" alt="Instituição dos primeiros Ministros da Comunhão, 2000" loading="lazy" /><figcaption>Instituição dos primeiros Ministros da Comunhão, 2000 · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="ministros2000"><img src="ministros_2000_2.jpg" alt="Os primeiros Ministros da Comunhão sentados em grupo, 2000" loading="lazy" /><figcaption>Os primeiros Ministros da Comunhão, 2000 · Acervo Fatorelli</figcaption></figure>
       <figure class="x-lb__slide" data-album="ministros2000"><img src="ministros_2000_3.jpg" alt="Dom Emílio Pignoli com o livro na instituição dos Ministros da Comunhão, 2000" loading="lazy" /><figcaption>Dom Emílio Pignoli na instituição dos Ministros, 2000 · Acervo Fatorelli</figcaption></figure>
@@ -3038,6 +3161,8 @@
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_2.jpg" alt="Bispo e padres celebrando no palco coberto por uma tenda azul, na criação da paróquia em 29/10/2006" loading="lazy" /><figcaption>A celebração sob a tenda, 29/10/2006</figcaption></figure>
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_3.jpg" alt="Bispo de mitra caminhando entre os fiéis na criação da Paróquia Santa Rosa de Lima, em 29/10/2006" loading="lazy" /><figcaption>O bispo entre os fiéis, 29/10/2006</figcaption></figure>
       <figure class="x-lb__slide" data-album="santarosa"><img src="santarosa_4.jpg" alt="Dois padres de alva entre os fiéis na criação da Paróquia Santa Rosa de Lima, em 29/10/2006" loading="lazy" /><figcaption>Padres com a comunidade, 29/10/2006</figcaption></figure>
+      <figure class="x-lb__slide" data-album="cercojerico"><img src="cerco_jerico_capa.jpg" alt="Cartaz do Cerco de Jericó: ostensório com o Santíssimo, de 24 a 30 de outubro" loading="lazy" /><figcaption>Cerco de Jericó · 24 a 30 de outubro</figcaption></figure>
+      <figure class="x-lb__slide" data-album="cercojerico"><img src="cerco_jerico_programacao.jpg" alt="Cartaz com a programação do Cerco de Jericó e o padre de cada dia" loading="lazy" /><figcaption>Programação do Cerco de Jericó</figcaption></figure>
       <button class="x-lb__btn x-lb__close" type="button" aria-label="Fechar"><svg class="x-i"><use href="#i-close" /></svg></button>
       <button class="x-lb__btn x-lb__prev" type="button" aria-label="Foto anterior"><svg class="x-i"><use href="#i-arrow" /></svg></button>
       <button class="x-lb__btn x-lb__next" type="button" aria-label="Próxima foto"><svg class="x-i"><use href="#i-arrow" /></svg></button>

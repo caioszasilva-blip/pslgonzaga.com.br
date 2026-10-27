@@ -3495,7 +3495,7 @@
           var t = txt(a.querySelector("h3"));
           if (!t) return;
           if (!a.id) a.id = "aviso-" + (i + 1);
-          items.push({ id: a.id, tag: "Aviso", icon: "i-mega", img: imgOf(a), text: t, desc: txt(a.querySelector(".x-feat__text") || a.querySelector("p:not(.x-feat__tag)")) });
+          items.push({ id: a.id, tag: "Aviso", icon: "i-mega", img: imgOf(a), text: t, desc: txt(a.querySelector(".x-feat__text") || a.querySelector("p:not(.x-feat__tag)")) || Array.prototype.map.call(a.querySelectorAll(".x-feat__meta li"), txt).join(" · ") });
         });
         var n = 0;
         document.querySelectorAll("section#vida-paroquia article.x-viv__card").forEach(function (c) {

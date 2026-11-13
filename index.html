@@ -885,33 +885,6 @@
           <ol class="x-dest__dots" aria-hidden="true"></ol>
         </div>
 
-        <section class="x-anniv" id="aniversario" aria-labelledby="aniversario-titulo">
-          <div class="x-wrap">
-            <article class="x-anniv__card">
-              <div class="x-anniv__seal">
-                <figure class="x-anniv__photo">
-                  <img class="x-anniv__hist" src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" />
-                  <figcaption>Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos</figcaption>
-                </figure>
-                <p><span class="x-anniv__fig">66 anos</span><span class="x-anniv__years">1960 – 2026</span></p>
-              </div>
-              <div class="x-anniv__body">
-                <span class="x-anniv__tag">Aniversário da Paróquia</span>
-                <h2 id="aniversario-titulo">66 anos da Paróquia São Luiz Gonzaga</h2>
-                <p class="x-anniv__text">No dia 30 de outubro de 1960, nascia a nossa Paróquia São Luiz Gonzaga, no coração do Jardim São Luís. São 66 anos de fé, oração e comunidade. Venha agradecer a Deus conosco!</p>
-                <ul class="x-anniv__when">
-                  <li><svg class="x-i"><use href="#i-cal" /></svg> Sexta-feira, 30 de outubro de 2026</li>
-                  <li><svg class="x-i"><use href="#i-star" /></svg> Nossa Paróquia completa 66 anos de história</li>
-                </ul>
-                <div class="x-anniv__actions">
-                  <a class="x-btn x-btn--ghost" href="https://api.whatsapp.com/send?text=Em%2030%20de%20outubro%20de%202026%2C%20a%20Par%C3%B3quia%20S%C3%A3o%20Luiz%20Gonzaga%20completa%2066%20anos%20de%20hist%C3%B3ria%21%20https%3A%2F%2Fpsluizgonzaga.com.br" target="_blank" rel="noopener"><svg class="x-i"><use href="#i-wa" /></svg> Compartilhar no WhatsApp</a>
-                  <a class="x-btn x-btn--gold" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
         <section class="x-sec x-sec--white" id="boas-vindas">
           <div class="x-wrap x-welcome">
             <div class="x-welcome__text">
@@ -1198,7 +1171,7 @@
                 </article>
               </li>
               <li>
-                <article class="x-viv__card" id="noticia-66-anos">
+                <article class="x-viv__card" id="noticia-66-anos" data-destaque="nao">
                   <div class="x-viv__media">
                     <div class="x-viv__track" tabindex="0" aria-label="Foto histórica da Paróquia São Luiz Gonzaga">
                       <img src="paroquia_1960_historica.png" alt="Fiéis diante da primeira capela da Paróquia São Luiz Gonzaga, nos primeiros anos" loading="lazy" />
@@ -1209,9 +1182,8 @@
                     <div class="x-viv__tags"><span class="x-viv__date">Aniversário da Paróquia</span></div>
                     <h3>66 anos da Paróquia São Luiz Gonzaga</h3>
                     <p class="x-viv__when"><svg class="x-i"><use href="#i-cal" /></svg> Sexta-feira, 30 de outubro de 2026 · 66 anos de história</p>
-                    <p class="x-viv__text">São 66 anos de fé, oração e comunidade. Venha agradecer a Deus conosco!</p>
+                    <p class="x-viv__text">São 66 anos de fé, oração e comunidade.</p>
                     <div class="x-viv__links">
-                      <a class="x-btn x-btn--dark x-btn--sm" href="#aniversario"><svg class="x-i"><use href="#i-arrow" /></svg> Ver destaque</a>
                       <a class="x-btn x-btn--line x-btn--sm" href="#historia"><svg class="x-i"><use href="#i-arrow" /></svg> Conheça nossa história</a>
                     </div>
                   </div>
@@ -3427,7 +3399,7 @@
         }
 
         var anniv = document.getElementById("noticia-66-anos");
-        if (anniv && txt(anniv.querySelector("h3"))) {
+        if (anniv && anniv.getAttribute("data-destaque") !== "nao" && txt(anniv.querySelector("h3"))) {
           items.push({ id: anniv.id, tag: "Aviso", icon: "i-mega", img: imgOf(anniv), text: txt(anniv.querySelector("h3")), desc: txt(anniv.querySelector(".x-viv__text") || anniv.querySelector(".x-feat__text")) });
         }
         document.querySelectorAll("section#noticias article.x-feat").forEach(function (a, i) {

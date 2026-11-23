@@ -1171,7 +1171,7 @@
                 </article>
               </li>
               <li>
-                <article class="x-viv__card" id="vida-crisma-forania-2026">
+                <article class="x-viv__card" id="vida-crisma-forania-2026" data-destaque="topo">
                   <div class="x-viv__media">
                     <div class="x-viv__track" tabindex="0" aria-label="Fotos da Santa Missa da Crisma da Forania São Luiz">
                       <img src="crisma_forania_2026_1.jpg" alt="Dom Luiz Antônio Guedes e os padres da forania no altar na Crisma da Forania São Luiz, 21/11/2026" loading="lazy" />
@@ -3487,7 +3487,8 @@
           n++;
           if (!c.id) { var k = n; while (document.getElementById("viv-" + k)) k++; c.id = "viv-" + k; }
           if (c.getAttribute("data-destaque") === "nao") return;
-          items.push({ id: c.id, tag: txt(c.querySelector(".x-viv__date")), icon: "i-cal", img: imgOf(c), text: t, desc: txt(c.querySelector(".x-viv__body > p") || c.querySelector("h3 ~ p")) });
+          var vit = { id: c.id, tag: txt(c.querySelector(".x-viv__date")), icon: "i-cal", img: imgOf(c), text: t, desc: txt(c.querySelector(".x-viv__body > p") || c.querySelector("h3 ~ p")) };
+          if (c.getAttribute("data-destaque") === "topo") items.unshift(vit); else items.push(vit);
         });
         if (!items.length) { bar.hidden = true; return; }
 

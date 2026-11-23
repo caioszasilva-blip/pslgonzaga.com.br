@@ -698,6 +698,9 @@
       .x-header .x-menu .x-dd__menu a { display: block; padding: 10px 12px; }
       .x-header .x-menu .x-dd__menu a::after { display: none; }
 
+      .x-share { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; padding: 8px 14px; border: 1px solid var(--x-line); border-radius: 999px; background: #fff; color: var(--x-brown); font: inherit; font-size: 14px; cursor: pointer; }
+      .x-share:hover { border-color: var(--x-gold); }
+      .x-share svg { width: 16px; height: 16px; }
       /* Carrossel de destaques */
       .x-dest { padding: 28px 0 22px; background: var(--x-cream-2); border-bottom: 1px solid var(--x-line); }
       .x-dest[hidden] { display: none; }
@@ -3568,6 +3571,28 @@
           if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
           el.focus({ preventScroll: true });
           a.blur();
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var sel = "section#noticias article.x-feat[id], section#vida-paroquia article.x-viv__card[id]";
+        document.querySelectorAll(sel).forEach(function (c) {
+          var body = c.querySelector(".x-feat__body, .x-viv__body");
+          if (!body || body.querySelector(".x-share")) return;
+          var url = "https://psluizgonzaga.com.br/m-" + c.id + ".html";
+          var h = c.querySelector("h3");
+          var title = h ? h.textContent.replace(/\s+/g, " ").trim() : "Paróquia São Luiz Gonzaga";
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "x-share";
+          b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span>Compartilhar</span>';
+          b.addEventListener("click", function () {
+            if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () {}); return; }
+            var done = function () { b.querySelector("span").textContent = "Link copiado!"; setTimeout(function () { b.querySelector("span").textContent = "Compartilhar"; }, 2500); };
+            if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { window.prompt("Copie o link:", url); });
+            else window.prompt("Copie o link:", url);
+          });
+          body.appendChild(b);
         });
       })();
     </script>
